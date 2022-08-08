@@ -34,6 +34,18 @@ let sectionTitle = document.getElementsByClassName("section-title");
 
 let triger = false;
 
+function setDisplayCounter(scrollSectionDisplay, counterLine, counterLineNum) {
+  if (scrollSection < 10) {
+    counterUp.innerHTML = "0" + scrollSectionDisplay;
+  } else {
+    counterUp.innerHTML = scrollSectionDisplay;
+  }
+  for (let i = 0; i < counterLine.length; i++) {
+    counterLine[i].style.backgroundColor = "#c9c9c9";
+  }
+  counterLine[counterLineNum].style.backgroundColor = "#ee4123";
+}
+
 function scrollVideo(videoNum, nextScrollSec) {
   if (!triger) {
     videos[videoNum].play();
@@ -62,8 +74,9 @@ function scrollVideoRev(videoNum, prevScrollSec) {
       videos[i].style.opacity = 0;
     }
     videosRev[videoNum].style.opacity = 1;
-    scrollSection = prevScrollSec;
+
     videosRev[videoNum].addEventListener("ended", () => {
+      scrollSection = prevScrollSec;
       for (let i = 0; i < videosRev.length; i++) {
         if (i != videoNum) videosRev[i].style.opacity = 0;
       }
@@ -91,6 +104,7 @@ document.addEventListener("scroll", () => {
     console.log("down");
     if (scrollSection == 1) {
       if (!triger) {
+        setDisplayCounter(1, counterLine, 0);
         videosRev[0].style.opacity = 0;
         videos[0].play();
         videos[0].style.opacity = 1;
@@ -106,77 +120,84 @@ document.addEventListener("scroll", () => {
     }
     if (scrollSection == 2) {
       scrollVideo(1, 3);
+      setDisplayCounter(2, counterLine, 1);
     }
     if (scrollSection == 3) {
       scrollVideo(2, 4);
+      setDisplayCounter(3, counterLine, 2);
     }
     if (scrollSection == 4) {
       scrollVideo(3, 5);
+      setDisplayCounter(4, counterLine, 3);
     }
     if (scrollSection == 5) {
       scrollVideo(4, 6);
+      setDisplayCounter(5, counterLine, 4);
     }
     if (scrollSection == 6) {
       scrollVideo(5, 7);
+      setDisplayCounter(6, counterLine, 5);
     }
     if (scrollSection == 7) {
       scrollVideo(6, 8);
+      setDisplayCounter(7, counterLine, 6);
     }
     if (scrollSection == 8) {
       scrollVideo(7, 9);
+      setDisplayCounter(8, counterLine, 7);
     }
     if (scrollSection == 9) {
       scrollVideo(8, 10);
+      setDisplayCounter(9, counterLine, 8);
     }
     if (scrollSection == 10) {
       scrollVideo(9, 11);
+      setDisplayCounter(10, counterLine, 9);
     }
   } else {
     console.log("up", "kurac");
     if (scrollSection == 2) {
       scrollVideoRev(0, 1);
+      setDisplayCounter(1, counterLine, 0);
     }
     if (scrollSection == 3) {
       scrollVideoRev(1, 2);
+      setDisplayCounter(1, counterLine, 0);
     }
     if (scrollSection == 4) {
       scrollVideoRev(2, 3);
+      setDisplayCounter(2, counterLine, 1);
     }
     if (scrollSection == 5) {
       scrollVideoRev(3, 4);
+      setDisplayCounter(3, counterLine, 2);
     }
     if (scrollSection == 6) {
       scrollVideoRev(4, 5);
+      setDisplayCounter(4, counterLine, 3);
     }
     if (scrollSection == 7) {
       scrollVideoRev(5, 6);
+      setDisplayCounter(5, counterLine, 4);
     }
     if (scrollSection == 8) {
       scrollVideoRev(6, 7);
+      setDisplayCounter(6, counterLine, 5);
     }
     if (scrollSection == 9) {
       scrollVideoRev(7, 8);
+      setDisplayCounter(7, counterLine, 6);
     }
     if (scrollSection == 10) {
       scrollVideoRev(8, 9);
+      setDisplayCounter(8, counterLine, 7);
     }
     if (scrollSection == 11) {
       scrollVideoRev(9, 10);
+      setDisplayCounter(9, counterLine, 8);
     }
   }
   lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-
-  ///section counter
-  if (scrollSection < 10) {
-    counterUp.innerHTML = "0" + scrollSection;
-  } else {
-    counterUp.innerHTML = scrollSection;
-  }
-  for (let i = 0; i < counterLine.length; i++) {
-    counterLine[i].style.backgroundColor = "#c9c9c9";
-  }
-  counterLine[scrollSection - 1].style.backgroundColor = "#ee4123";
-  ////
 });
 setInterval(() => {
   console.log(scrollSection);
