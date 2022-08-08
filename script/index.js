@@ -62,7 +62,9 @@ function scrollVideo(videoNum, nextScrollSec) {
           videos[i].currentTime = 0;
         }
       }
-      triger = false;
+      setTimeout(() => {
+        triger = false;
+      }, 1000);
     });
     triger = true;
   }
@@ -83,7 +85,9 @@ function scrollVideoRev(videoNum, prevScrollSec) {
           videosRev[i].currentTime = 0;
         }
       }
-      triger = false;
+      setTimeout(() => {
+        triger = false;
+      }, 1000);
     });
     triger = true;
   }
@@ -92,8 +96,17 @@ function scrollVideoRev(videoNum, prevScrollSec) {
 let videos = document.getElementsByClassName("videos");
 let videosRev = document.getElementsByClassName("videosRev");
 let intervalPlay = setInterval(() => {
-  console.log(videos[0].currentTime, scrollSection, window.pageYOffset);
   if (videos[0].currentTime > 0.01) {
+    clearInterval(intervalPlay);
+    videos[0].pause();
+    videos[0].currentTime = 0;
+  }
+  if (videos[1].currentTime > 0.01) {
+    clearInterval(intervalPlay);
+    videos[0].pause();
+    videos[0].currentTime = 0;
+  }
+  if (videos[2].currentTime > 0.01) {
     clearInterval(intervalPlay);
     videos[0].pause();
     videos[0].currentTime = 0;
@@ -122,7 +135,9 @@ document.addEventListener("scroll", () => {
               videos[i].currentTime = 0;
             }
           }
-          triger = false;
+          setTimeout(() => {
+            triger = false;
+          }, 1000);
         });
         triger = true;
       }
@@ -270,7 +285,9 @@ document.getElementById("arrowDownSect").onclick = () => {
             videos[i].currentTime = 0;
           }
         }
-        triger = false;
+        setTimeout(() => {
+          triger = false;
+        }, 1000);
       });
       triger = true;
     }
@@ -312,17 +329,17 @@ document.getElementById("arrowDownSect").onclick = () => {
     scrollVideo(9, 11);
   }
 };
-setInterval(() => {
-  console.log(scrollSection);
-  console.log(triger);
-  console.log(
-    videos[0].currentTime,
-    videos[1].currentTime,
-    videos[2].currentTime
-  );
-  console.log(
-    videosRev[9].currentTime,
-    videosRev[8].currentTime,
-    videosRev[7].currentTime
-  );
-}, 100);
+// setInterval(() => {
+//   console.log(scrollSection);
+//   console.log(triger);
+//   console.log(
+//     videos[0].currentTime,
+//     videos[1].currentTime,
+//     videos[2].currentTime
+//   );
+//   console.log(
+//     videosRev[9].currentTime,
+//     videosRev[8].currentTime,
+//     videosRev[7].currentTime
+//   );
+// }, 100);
