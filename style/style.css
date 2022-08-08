@@ -16,6 +16,14 @@ body {
   height: 100000px;
 }
 
+#loading-scr {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ee4123;
+  z-index: 100;
+  position: absolute;
+}
+
 .videos {
   width: 100vw;
   /* height: 100vh; */
@@ -132,11 +140,7 @@ body {
   position: fixed;
   z-index: 3;
   padding: 50px;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 1) 10%,
-    rgba(2, 0, 36, 0) 100%
-  );
+  background: radial-gradient(circle, rgba(255, 255, 255, 1) 10%, rgba(2, 0, 36, 0) 100%);
   border-radius: 10%;
   opacity: 0;
   transition: 0.5s;
