@@ -75,7 +75,7 @@ function scrollVideoRev(videoNum, prevScrollSec) {
     videosRev[videoNum].play();
     videosRev[videoNum].style.opacity = 1;
     for (let i = 0; i < videos.length; i++) {
-      videos[i].style.opacity = 0;
+      // videos[i].style.opacity = 0;
       videos[i].currentTime = 0;
     }
     videosRev[videoNum].addEventListener("ended", () => {
@@ -85,6 +85,7 @@ function scrollVideoRev(videoNum, prevScrollSec) {
           videosRev[i].style.opacity = 0;
           videosRev[i].currentTime = 0;
         }
+        videos[i].style.opacity = 0;
       }
       setTimeout(() => {
         triger = false;
