@@ -53,7 +53,6 @@ function scrollVideo(videoNum, nextScrollSec) {
     for (let i = 0; i < videosRev.length; i++) {
       videosRev[i].style.opacity = 0;
     }
-
     videos[videoNum].addEventListener("ended", () => {
       scrollSection = nextScrollSec;
       for (let i = 0; i < videos.length; i++) {
@@ -67,14 +66,10 @@ function scrollVideo(videoNum, nextScrollSec) {
 function scrollVideoRev(videoNum, prevScrollSec) {
   if (!triger) {
     videosRev[videoNum].play();
-    for (let i = 0; i < videosRev.length; i++) {
-      videosRev[i].style.opacity = 0;
-    }
+    videosRev[videoNum].style.opacity = 1;
     for (let i = 0; i < videos.length; i++) {
       videos[i].style.opacity = 0;
     }
-    videosRev[videoNum].style.opacity = 1;
-
     videosRev[videoNum].addEventListener("ended", () => {
       scrollSection = prevScrollSec;
       for (let i = 0; i < videosRev.length; i++) {
@@ -157,49 +152,49 @@ document.addEventListener("scroll", () => {
   } else {
     console.log("up", "kurac");
     if (scrollSection == 2) {
-      scrollVideoRev(0, 1);
+      scrollVideoRev(9, 1);
       setDisplayCounter(1, counterLine, 0);
     }
     if (scrollSection == 3) {
-      scrollVideoRev(1, 2);
+      scrollVideoRev(8, 2);
       setDisplayCounter(1, counterLine, 0);
     }
     if (scrollSection == 4) {
-      scrollVideoRev(2, 3);
+      scrollVideoRev(7, 3);
       setDisplayCounter(2, counterLine, 1);
     }
     if (scrollSection == 5) {
-      scrollVideoRev(3, 4);
+      scrollVideoRev(6, 4);
       setDisplayCounter(3, counterLine, 2);
     }
     if (scrollSection == 6) {
-      scrollVideoRev(4, 5);
+      scrollVideoRev(5, 5);
       setDisplayCounter(4, counterLine, 3);
     }
     if (scrollSection == 7) {
-      scrollVideoRev(5, 6);
+      scrollVideoRev(4, 6);
       setDisplayCounter(5, counterLine, 4);
     }
     if (scrollSection == 8) {
-      scrollVideoRev(6, 7);
+      scrollVideoRev(3, 7);
       setDisplayCounter(6, counterLine, 5);
     }
     if (scrollSection == 9) {
-      scrollVideoRev(7, 8);
+      scrollVideoRev(2, 8);
       setDisplayCounter(7, counterLine, 6);
     }
     if (scrollSection == 10) {
-      scrollVideoRev(8, 9);
+      scrollVideoRev(1, 9);
       setDisplayCounter(8, counterLine, 7);
     }
     if (scrollSection == 11) {
-      scrollVideoRev(9, 10);
+      scrollVideoRev(0, 10);
       setDisplayCounter(9, counterLine, 8);
     }
   }
   lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
 });
-setInterval(() => {
-  console.log(scrollSection);
-  console.log(triger);
-}, 100);
+// setInterval(() => {
+//   console.log(scrollSection);
+//   console.log(triger);
+// }, 100);
