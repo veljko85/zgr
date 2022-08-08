@@ -10,6 +10,9 @@ window.onbeforeunload = function () {
 let stateCheck = setInterval(() => {
   console.log(document.readyState);
   if (document.readyState === "complete") {
+    // document.getElementById("video01").style.opacity = 1;
+    // document.getElementById("loading-scr").style.display = "none";
+
     clearInterval(stateCheck);
     console.log(document.readyState);
   }
