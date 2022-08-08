@@ -10,9 +10,7 @@ window.onbeforeunload = function () {
 let stateCheck = setInterval(() => {
   console.log(document.readyState);
   if (document.readyState === "complete") {
-    // document.getElementById("video01").style.opacity = 1;
-    // document.getElementById("loading-scr").style.display = "none";
-
+    document.getElementById("loading-scr").style.display = "none";
     clearInterval(stateCheck);
     console.log(document.readyState);
   }
@@ -100,16 +98,6 @@ let videos = document.getElementsByClassName("videos");
 let videosRev = document.getElementsByClassName("videosRev");
 let intervalPlay = setInterval(() => {
   if (videos[0].currentTime > 0.01) {
-    clearInterval(intervalPlay);
-    videos[0].pause();
-    videos[0].currentTime = 0;
-  }
-  if (videos[1].currentTime > 0.01) {
-    clearInterval(intervalPlay);
-    videos[0].pause();
-    videos[0].currentTime = 0;
-  }
-  if (videos[2].currentTime > 0.01) {
     clearInterval(intervalPlay);
     videos[0].pause();
     videos[0].currentTime = 0;
@@ -332,17 +320,17 @@ document.getElementById("arrowDownSect").onclick = () => {
     scrollVideo(9, 11);
   }
 };
-// setInterval(() => {
-//   console.log(scrollSection);
-//   console.log(triger);
-//   console.log(
-//     videos[0].currentTime,
-//     videos[1].currentTime,
-//     videos[2].currentTime
-//   );
-//   console.log(
-//     videosRev[9].currentTime,
-//     videosRev[8].currentTime,
-//     videosRev[7].currentTime
-//   );
-// }, 100);
+setInterval(() => {
+  console.log(scrollSection);
+  console.log(triger);
+  console.log(
+    videos[0].currentTime,
+    videos[1].currentTime,
+    videos[2].currentTime
+  );
+  console.log(
+    videosRev[9].currentTime,
+    videosRev[8].currentTime,
+    videosRev[7].currentTime
+  );
+}, 100);
