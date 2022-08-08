@@ -101,6 +101,24 @@ body {
   font-weight: 300;
   font-family: "Montserrat", sans-serif;
 }
+#arrowUpSect {
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/arrowUp.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+#arrowDownSect {
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/arrowDown.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
 .counter-line {
   width: 3px;
   height: 20px;
