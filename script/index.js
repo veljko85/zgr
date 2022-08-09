@@ -313,9 +313,36 @@ function videoForvard() {
     //start video
     setDisplayCounter(8, counterLine, 7);
     scrollVideo(7, 9);
+    //content display
+    setTimeout(() => {
+      sectionContainer[7].style.display = "block";
+    }, 3100);
+    setTimeout(() => {
+      sectionContainer[7].style.opacity = 1;
+      sectionTitle[7].classList.add("fade-in-title");
+    }, 4100);
+    setTimeout(() => {
+      text[14].classList.add("fade-in-text");
+    }, 4200);
+    setTimeout(() => {
+      text[15].classList.add("fade-in-text");
+    }, 4300);
+    setTimeout(() => {
+      text[16].classList.add("fade-in-text");
+    }, 4400);
   }
   ///////// 9
   if (scrollSection == 9 && !triger) {
+    //content remove
+    sectionContainer[7].style.opacity = 0;
+    sectionTitle[7].classList.remove("fade-in-title");
+    text[14].classList.remove("fade-in-text");
+    text[15].classList.remove("fade-in-text");
+    text[16].classList.remove("fade-in-text");
+    setTimeout(() => {
+      sectionContainer[7].style.display = "none";
+    }, 500);
+    //start video
     setDisplayCounter(9, counterLine, 8);
     scrollVideo(8, 10);
   }
@@ -489,7 +516,6 @@ function videoReverse() {
       sectionContainer[6].style.display = "none";
     }, 500);
     //start video
-    //start video
     setDisplayCounter(6, counterLine, 5);
     scrollVideoRev(3, 7);
     //content display
@@ -509,6 +535,15 @@ function videoReverse() {
   }
   //////// 8
   if (scrollSection == 9 && !triger) {
+    //content remove
+    sectionContainer[7].style.opacity = 0;
+    sectionTitle[7].classList.remove("fade-in-title");
+    text[14].classList.remove("fade-in-text");
+    text[15].classList.remove("fade-in-text");
+    text[16].classList.remove("fade-in-text");
+    setTimeout(() => {
+      sectionContainer[7].style.display = "none";
+    }, 500);
     //start video
     setDisplayCounter(7, counterLine, 6);
     scrollVideoRev(2, 8);
@@ -529,8 +564,26 @@ function videoReverse() {
   }
   //////// 9
   if (scrollSection == 10 && !triger) {
+    //start video
     setDisplayCounter(8, counterLine, 7);
     scrollVideoRev(1, 9);
+    //content display
+    setTimeout(() => {
+      sectionContainer[7].style.display = "block";
+    }, 4100);
+    setTimeout(() => {
+      sectionContainer[7].style.opacity = 1;
+      sectionTitle[7].classList.add("fade-in-title");
+    }, 5100);
+    setTimeout(() => {
+      text[14].classList.add("fade-in-text");
+    }, 5200);
+    setTimeout(() => {
+      text[15].classList.add("fade-in-text");
+    }, 5300);
+    setTimeout(() => {
+      text[16].classList.add("fade-in-text");
+    }, 5400);
   }
   ////////// 10
   if (scrollSection == 11 && !triger) {
