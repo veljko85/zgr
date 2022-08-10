@@ -679,22 +679,22 @@ let videosRev = document.getElementsByClassName("videosRev");
 let intervalPlay = setInterval(() => {
   console.log("not done");
   if (videos[0].currentTime > 0.01) {
-    // clearInterval(intervalPlay);
+    clearInterval(intervalPlay);
     videos[0].pause();
     videos[0].currentTime = 0;
     console.log("done 1");
-    if (videos[1].currentTime > 0.01) {
-      // clearInterval(intervalPlay);
-      videos[1].pause();
-      videos[1].currentTime = 0;
-      console.log("done 2");
-    }
-    if (videosRev[9].currentTime > 0.01) {
-      clearInterval(intervalPlay);
-      videos[9].pause();
-      videos[9].currentTime = 0;
-      console.log("done 3");
-    }
+    // if (videos[1].currentTime > 0.01) {
+    //   // clearInterval(intervalPlay);
+    //   videos[1].pause();
+    //   videos[1].currentTime = 0;
+    //   console.log("done 2");
+    // }
+    // if (videosRev[9].currentTime > 0.01) {
+    //   clearInterval(intervalPlay);
+    //   videos[9].pause();
+    //   videos[9].currentTime = 0;
+    //   console.log("done 3");
+    // }
   }
 }, 100);
 
