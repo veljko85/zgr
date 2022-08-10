@@ -10,9 +10,12 @@ window.onbeforeunload = function () {
 let stateCheck = setInterval(() => {
   console.log(document.readyState);
   if (document.readyState === "complete") {
-    document.getElementById("loading-scr").style.display = "none";
+    setTimeout(() => {
+      document.getElementById("loading-scr").style.display = "none";
+      console.log(document.readyState);
+    }, 1000);
+
     clearInterval(stateCheck);
-    console.log(document.readyState);
   }
 }, 100);
 
@@ -30,8 +33,12 @@ counterLine[0].style.backgroundColor = "#ee4123";
 let counterUp = document.getElementById("counter-up");
 
 let text = document.getElementsByClassName("text");
+// let textTen = document.getElementsByClassName("text-ten");
 let sectionContainer = document.getElementsByClassName("section-container");
 let sectionTitle = document.getElementsByClassName("section-title");
+let titleTen = document.getElementsByClassName("title-ten");
+let textTen = document.getElementsByClassName("text-ten");
+let textTenTwo = document.getElementsByClassName("text-ten-two");
 
 let triger = false;
 
@@ -345,11 +352,50 @@ function videoForvard() {
     //start video
     setDisplayCounter(9, counterLine, 8);
     scrollVideo(8, 10);
+    //content display
+    setTimeout(() => {
+      sectionContainer[8].style.display = "block";
+    }, 3100);
+    setTimeout(() => {
+      sectionContainer[8].style.opacity = 1;
+      sectionTitle[8].classList.add("fade-in-title");
+    }, 4100);
+    setTimeout(() => {
+      text[17].classList.add("fade-in-text");
+    }, 4200);
+    setTimeout(() => {
+      text[18].classList.add("fade-in-text");
+    }, 4300);
+    setTimeout(() => {
+      text[19].classList.add("fade-in-text");
+    }, 4400);
   }
   ////////// 10
   if (scrollSection == 10 && !triger) {
+    //content remove
+    sectionContainer[8].style.opacity = 0;
+    sectionTitle[8].classList.remove("fade-in-title");
+    text[17].classList.remove("fade-in-text");
+    text[18].classList.remove("fade-in-text");
+    text[19].classList.remove("fade-in-text");
+    setTimeout(() => {
+      sectionContainer[8].style.display = "none";
+    }, 500);
+    //start video
     setDisplayCounter(10, counterLine, 9);
     scrollVideo(9, 11);
+    //content display
+    setTimeout(() => {
+      sectionContainer[9].style.display = "block";
+    }, 4100);
+    setTimeout(() => {
+      sectionContainer[9].style.opacity = 1;
+      titleTen[0].classList.add("fade-in-title-ten");
+      textTen[0].classList.add("fade-in-text-ten");
+    }, 5100);
+    setTimeout(() => {
+      textTenTwo[0].classList.add("fade-in-text-ten-two");
+    }, 5200);
   }
 }
 //FUNCTION VIDEO REVERSE
@@ -564,6 +610,15 @@ function videoReverse() {
   }
   //////// 9
   if (scrollSection == 10 && !triger) {
+    //content remove
+    sectionContainer[8].style.opacity = 0;
+    sectionTitle[8].classList.remove("fade-in-title");
+    text[17].classList.remove("fade-in-text");
+    text[18].classList.remove("fade-in-text");
+    text[19].classList.remove("fade-in-text");
+    setTimeout(() => {
+      sectionContainer[8].style.display = "none";
+    }, 500);
     //start video
     setDisplayCounter(8, counterLine, 7);
     scrollVideoRev(1, 9);
@@ -587,8 +642,34 @@ function videoReverse() {
   }
   ////////// 10
   if (scrollSection == 11 && !triger) {
+    //content remove
+    sectionContainer[9].style.opacity = 0;
+    titleTen[0].classList.remove("fade-in-title-ten");
+    textTen[0].classList.remove("fade-in-text-ten");
+    textTenTwo[0].classList.remove("fade-in-text-ten-two");
+    setTimeout(() => {
+      sectionContainer[9].style.display = "none";
+    }, 500);
+    //start video
     setDisplayCounter(9, counterLine, 8);
     scrollVideoRev(0, 10);
+    //content display
+    setTimeout(() => {
+      sectionContainer[8].style.display = "block";
+    }, 3100);
+    setTimeout(() => {
+      sectionContainer[8].style.opacity = 1;
+      sectionTitle[8].classList.add("fade-in-title");
+    }, 4100);
+    setTimeout(() => {
+      text[17].classList.add("fade-in-text");
+    }, 4200);
+    setTimeout(() => {
+      text[18].classList.add("fade-in-text");
+    }, 4300);
+    setTimeout(() => {
+      text[19].classList.add("fade-in-text");
+    }, 4400);
   }
 }
 
