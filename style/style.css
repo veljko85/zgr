@@ -191,7 +191,7 @@ body {
 .join-us-arrow {
   width: 80px;
   height: 35px;
-  background-image: url("/img/right-arrow.png");
+  background-image: url("../img/right-arrow.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -203,7 +203,7 @@ body {
 .parnets-logo-one {
   width: 50px;
   height: 80px;
-  background-image: url("/img/aws.png");
+  background-image: url("../img/aws.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -213,7 +213,7 @@ body {
 .parnets-logo-two {
   width: 100px;
   height: 80px;
-  background-image: url("/img/softBank.png");
+  background-image: url("../img/softBank.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -222,7 +222,7 @@ body {
 .parnets-logo-three {
   width: 100px;
   height: 80px;
-  background-image: url("/img/mckinsey.png");
+  background-image: url("../img/mckinsey.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -231,7 +231,7 @@ body {
 .parnets-logo-four {
   width: 50px;
   height: 80px;
-  background-image: url("/img/wps.png");
+  background-image: url("../img/wps.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
