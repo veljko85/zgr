@@ -1,5 +1,3 @@
-console.log("radi");
-
 // window.onload = function () {
 //   console.log("loaded");
 // };
@@ -889,7 +887,6 @@ let intervalPlay = setInterval(() => {
     clearInterval(intervalPlay);
     videos[0].pause();
     videos[0].currentTime = 0;
-    console.log("done 1");
     setTimeout(() => {
       document.getElementById("loading-scr").style.opacity = 0;
       console.log("loaded");
@@ -921,7 +918,7 @@ document.addEventListener("scroll", () => {
     console.log("down");
     videoForvard();
   } else {
-    console.log("up", "kurac");
+    console.log("up");
     videoReverse();
   }
   lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
