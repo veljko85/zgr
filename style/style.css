@@ -19,11 +19,11 @@ body {
 #loading-scr {
   width: 100vw;
   height: 100vh;
-  background-color: #ee4123;
+  background-color: #ffffff;
   z-index: 100;
   position: absolute;
+  transition: 2s;
 }
-
 .videos {
   width: 100vw;
   /* height: 100vh; */
@@ -144,8 +144,8 @@ body {
   font-family: "Montserrat", sans-serif;
   /* text-align: center; */
   opacity: 0;
-  padding-top: 20px;
-  transition: 0.5s;
+  padding-top: 40px;
+  transition: 1s;
 }
 .fade-in-title {
   opacity: 1;
@@ -163,8 +163,8 @@ body {
   color: #000000;
   font-weight: 300;
   font-family: "Montserrat", sans-serif;
-  padding-top: 40px;
-  transition: 0.5s;
+  padding-top: 60px;
+  transition: 1s;
   opacity: 0;
 }
 .fade-in-text {
@@ -176,8 +176,14 @@ body {
   font-weight: 700;
 }
 .join-us-container {
-  margin-top: 60px;
-  margin-left: 145px;
+  padding-top: 100px;
+  padding-left: 145px;
+  opacity: 0;
+  transition: 1s;
+}
+.join-us-container-fade-in {
+  padding-top: 60px;
+  opacity: 1;
 }
 .join-us {
   font-size: 22px;
@@ -198,7 +204,13 @@ body {
   float: left;
 }
 .partners-container {
-  margin-top: 10px;
+  padding-top: 50px;
+  opacity: 0;
+  transition: 1s;
+}
+.partners-fade-in {
+  padding-top: 10px;
+  opacity: 1;
 }
 .parnets-logo-one {
   width: 50px;
@@ -259,7 +271,7 @@ body {
     rgba(0, 212, 255, 0) 100%
   );
   opacity: 0;
-  transition: 0.5s;
+  transition: 1s;
   display: none;
 }
 #section-one {
@@ -280,7 +292,7 @@ body {
     rgba(0, 212, 255, 0) 100%
   );
   opacity: 0;
-  transition: 0.5s;
+  transition: 1s;
   display: none;
   right: 0;
 }
@@ -302,7 +314,7 @@ body {
     rgba(0, 212, 255, 0) 100%
   );
   opacity: 0;
-  transition: 0.5s;
+  transition: 1s;
   display: none;
 }
 #section-three {
@@ -323,7 +335,7 @@ body {
     rgba(0, 212, 255, 0) 100%
   );
   opacity: 0;
-  transition: 0.5s;
+  transition: 1s;
   display: none;
 }
 #section-four {
@@ -344,7 +356,7 @@ body {
     rgba(0, 212, 255, 0) 100%
   );
   opacity: 0;
-  transition: 0.5s;
+  transition: 1s;
   display: none;
 }
 #section-five {
@@ -366,7 +378,7 @@ body {
     rgba(0, 212, 255, 0) 100%
   );
   opacity: 0;
-  transition: 0.5s;
+  transition: 1s;
   display: none;
   right: 0;
 }
@@ -390,7 +402,7 @@ body {
     rgba(0, 212, 255, 0) 100%
   );
   opacity: 0;
-  transition: 0.5s;
+  transition: 1s;
   display: none;
   right: 0;
 }
@@ -413,7 +425,7 @@ body {
     rgba(0, 212, 255, 0) 100%
   );
   opacity: 0;
-  transition: 0.5s;
+  transition: 1s;
   display: none;
 }
 #section-eight {
@@ -435,7 +447,7 @@ body {
     rgba(0, 212, 255, 0) 100%
   );
   opacity: 0;
-  transition: 0.5s;
+  transition: 1s;
   display: none;
 }
 #section-nine {
@@ -445,6 +457,7 @@ body {
 }
 .section-ten-container {
   width: 100vw;
+  height: 350px;
   position: fixed;
   z-index: 3;
   background: rgb(255, 255, 255);
@@ -457,7 +470,7 @@ body {
     rgba(0, 212, 255, 0) 100%
   );
   opacity: 0;
-  transition: 0.5s;
+  transition: 1s;
   display: none;
   bottom: 0;
   padding-bottom: 30px;
@@ -475,7 +488,7 @@ body {
   /* text-align: center; */
   opacity: 0;
   padding-top: 40px;
-  transition: 0.5s;
+  transition: 1s;
 }
 .fade-in-title-ten {
   padding-top: 0px;
@@ -489,7 +502,7 @@ body {
   font-weight: 300;
   font-family: "Montserrat", sans-serif;
   padding-top: 40px;
-  transition: 0.5s;
+  transition: 1s;
   opacity: 0;
 }
 .fade-in-text-ten {
@@ -503,13 +516,13 @@ body {
   color: #000000;
   font-weight: 300;
   font-family: "Montserrat", sans-serif;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  transition: 0.5s;
+  padding-top: 60px;
+  /* padding-bottom: 0px; */
+  transition: 1s;
   opacity: 0;
 }
 .fade-in-text-ten-two {
   padding-top: 20px;
-  padding-bottom: 40px;
+  /* padding-bottom: 40px; */
   opacity: 1;
 }

@@ -17,6 +17,7 @@
 
     <link rel="stylesheet" type="text/css" href="style/reset.css" />
     <link rel="stylesheet" type="text/css" href="style/style.css" />
+    <link rel="stylesheet" type="text/css" href="style/scrollBtn.css" />
     <link rel="stylesheet" type="text/css" href="style/hamburger.css" />
 </head>
 
@@ -24,6 +25,18 @@
     <div class="main-container">
         <!--  MAIN CONTAINER -->
         <div id="loading-scr"></div>
+        <!-- SCROLL BUTTON -->
+        <div id="mouse-scroll">
+            <h1 id="scroll-text">SCROLL DOWN</h1>
+            <div class="mouse">
+                <div class="mouse-in"></div>
+            </div>
+            <div>
+                <span class="down-arrow-1"></span>
+                <span class="down-arrow-2"></span>
+                <span class="down-arrow-3"></span>
+            </div>
+        </div>
         <!--  NAVIGATION BAR -->
         <div class="nav-bar">
 
@@ -51,7 +64,7 @@
         <!--  SECTION COUNTER -->
         <div class="section-counter-container">
             <div id="arrowUpSect"></div>
-            <p id="counter-up">01</p>
+            <p id="counter-up">00</p>
             <div class="counter-line"></div>
             <div class="counter-line"></div>
             <div class="counter-line"></div>
@@ -62,7 +75,8 @@
             <div class="counter-line"></div>
             <div class="counter-line"></div>
             <div class="counter-line"></div>
-            <p id="counter-down">10</p>
+            <div class="counter-line"></div>
+            <p id="counter-down">11</p>
             <div id="arrowDownSect"></div>
         </div>
         <!--  SECTIONS CONTAINER -->
@@ -387,7 +401,7 @@
 
                     </div>
 
-                    <div class="join-us-container" style="float: left; margin: 150px 0 0 100px;">
+                    <div class="join-us-container" style="float: left;">
                         <a href="https://www.google.com">
                             <h2 class="join-us">Join us now</h2>
                             <div class="join-us-arrow"></div>
@@ -406,7 +420,7 @@
                 <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' src="videos/eli1920_a_1.mp4">
                 </source>
             </video>
-            <video id="video02" class="videos" autoplay muted playsinline>
+            <video id="video02" class="videos" muted playsinline>
                 <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' src="videos/eli1920_a_2.mp4">
                 </source>
             </video>
@@ -438,21 +452,21 @@
                 <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' src="videos/eli1920_a_9.mp4">
                 </source>
             </video>
-            <video id="video010" class="videos" muted playsinline>
+            <video id="video10" class="videos" muted playsinline>
                 <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' src="videos/eli1920_a_10.mp4">
                 </source>
             </video>
-            <!-- <video id="videoEnd" class="videos" muted playsinline>
-                <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' src="videos/eli1920_a_2.mp4">
+            <video id="vide11" class="videos" muted playsinline>
+                <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' src="videos/eli1920_a_11.mp4">
                 </source>
-            </video> -->
+            </video>
 
 
             <!-- REVERSE VIDEOS -->
-            <!-- <video id="videoRevEnd" class="videosRev" muted playsinline>
-                <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' src="videos/eli1920_r_2.mp4">
+            <video id="videoRev11" class="videosRev" muted playsinline>
+                <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' src="videos/eli1920_r_11.mp4">
                 </source>
-            </video> -->
+            </video>
             <video id="videoRev10" class="videosRev" muted playsinline>
                 <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' src="videos/eli1920_r_10.mp4">
                 </source>
@@ -489,7 +503,7 @@
                 <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' src="videos/eli1920_r_2.mp4">
                 </source>
             </video>
-            <video id="videoRev01" class="videosRev" autoplay muted playsinline>
+            <video id="videoRev01" class="videosRev" muted playsinline>
                 <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' src="videos/eli1920_r_1.mp4">
                 </source>
             </video>
