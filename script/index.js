@@ -70,7 +70,7 @@ function scrollVideo(videoNum, nextScrollSec) {
   videos[videoNum].style.opacity = 1;
   for (let i = 0; i < videosRev.length; i++) {
     videosRev[i].style.opacity = 0;
-    videosRev[i].currentTime = 0;
+    // videosRev[i].currentTime = 0;
   }
   videos[videoNum].addEventListener("ended", () => {
     scrollSection = nextScrollSec;
@@ -79,6 +79,9 @@ function scrollVideo(videoNum, nextScrollSec) {
         videos[i].style.opacity = 0;
         videos[i].currentTime = 0;
       }
+    }
+    for (const video of videosRev) {
+      video.currentTime = 0;
     }
     setTimeout(() => {
       triger = false;
@@ -89,10 +92,10 @@ function scrollVideo(videoNum, nextScrollSec) {
 function scrollVideoRev(videoNum, prevScrollSec) {
   videosRev[videoNum].play();
   videosRev[videoNum].style.opacity = 1;
-  for (let i = 0; i < videos.length; i++) {
-    // videos[i].style.opacity = 0;
-    videos[i].currentTime = 0;
-  }
+  // for (let i = 0; i < videos.length; i++) {
+  //   // videos[i].style.opacity = 0;
+  //   videos[i].currentTime = 0;
+  // }
   videosRev[videoNum].addEventListener("ended", () => {
     scrollSection = prevScrollSec;
     for (let i = 0; i < videosRev.length; i++) {
@@ -103,6 +106,7 @@ function scrollVideoRev(videoNum, prevScrollSec) {
     }
     for (const video of videos) {
       video.style.opacity = 0;
+      video.currentTime = 0;
     }
     setTimeout(() => {
       triger = false;
