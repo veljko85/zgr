@@ -82,7 +82,7 @@ function scrollVideo(videoNum, nextScrollSec) {
     }
     setTimeout(() => {
       triger = false;
-    }, 2000);
+    }, 100);
   });
   triger = true;
 }
@@ -106,7 +106,7 @@ function scrollVideoRev(videoNum, prevScrollSec) {
     }
     setTimeout(() => {
       triger = false;
-    }, 2000);
+    }, 100);
   });
   triger = true;
 }
@@ -132,7 +132,7 @@ function videoForvard() {
       }
       setTimeout(() => {
         triger = false;
-      }, 2000);
+      }, 100);
     });
     triger = true;
     //content display
@@ -914,7 +914,7 @@ let intervalPlay = setInterval(() => {
         }
         setTimeout(() => {
           triger = false;
-        }, 2000);
+        }, 100);
       });
       triger = true;
       //content display
@@ -985,7 +985,7 @@ document.getElementById("arrowDownSect").onclick = () => {
   console.log("downBtn");
   videoForvard();
 };
-// setInterval(() => {
-//   console.log(scrollSection);
-//   console.log(triger);
-// }, 100);
+setInterval(() => {
+  console.log(scrollSection);
+  console.log(triger);
+}, 100);
