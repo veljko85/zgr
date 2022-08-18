@@ -985,7 +985,7 @@ document.getElementById("arrowDownSect").onclick = () => {
   console.log("downBtn");
   videoForvard();
 };
-setInterval(() => {
-  console.log(scrollSection);
-  console.log(triger);
-}, 100);
+// setInterval(() => {
+//   console.log(scrollSection);
+//   console.log(triger);
+// }, 100);
