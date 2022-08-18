@@ -82,7 +82,7 @@ function scrollVideo(videoNum, nextScrollSec) {
     }
     setTimeout(() => {
       triger = false;
-    }, 2000);
+    }, 100);
   });
   triger = true;
 }
@@ -106,7 +106,7 @@ function scrollVideoRev(videoNum, prevScrollSec) {
     }
     setTimeout(() => {
       triger = false;
-    }, 2000);
+    }, 100);
   });
   triger = true;
 }
