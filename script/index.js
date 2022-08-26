@@ -1,21 +1,48 @@
-// window.onload = function () {
-//   console.log("loaded");
-// };
-
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 };
-// let stateCheck = setInterval(() => {
-//   console.log(document.readyState);
-//   if (document.readyState === "complete") {
-//     setTimeout(() => {
-//       document.getElementById("loading-scr").style.display = "none";
-//       console.log(document.readyState);
-//     }, 1000);
-
-//     clearInterval(stateCheck);
-//   }
-// }, 100);
+//VIDEO
+let videos = document.getElementsByClassName("videos");
+let videosRev = document.getElementsByClassName("videosRev");
+if (window.innerHeight > window.innerWidth) {
+  for (let i = 0; i < videos.length; i++) {
+    videos[i].src = "videos/eli1920_a_mob_" + (i + 1) + ".mp4";
+  }
+  videosRev[0].src = "videos/eli1920_r_mob_11.mp4";
+  videosRev[1].src = "videos/eli1920_r_mob_10.mp4";
+  videosRev[2].src = "videos/eli1920_r_mob_9.mp4";
+  videosRev[3].src = "videos/eli1920_r_mob_8.mp4";
+  videosRev[4].src = "videos/eli1920_r_mob_7.mp4";
+  videosRev[5].src = "videos/eli1920_r_mob_6.mp4";
+  videosRev[6].src = "videos/eli1920_r_mob_5.mp4";
+  videosRev[7].src = "videos/eli1920_r_mob_4.mp4";
+  videosRev[8].src = "videos/eli1920_r_mob_3.mp4";
+  videosRev[9].src = "videos/eli1920_r_mob_2.mp4";
+  document.getElementsByClassName("section-title")[1].innerHTML =
+    "PLANNING &" + " <br /> " + "DESIGN";
+  document.getElementsByClassName("text")[4].innerHTML =
+    "Using BIM method, we include data collected during the planning and" +
+    "<br />" +
+    "design phases. The digital twin extends data capturing throughout the" +
+    "<br />" +
+    "assets construction and operational phases, as well as future planning" +
+    "<br />" +
+    "and design.";
+} else {
+  for (let i = 0; i < videos.length; i++) {
+    videos[i].src = "videos/eli1920_a_" + (i + 1) + ".mp4";
+  }
+  videosRev[0].src = "videos/eli1920_r_11.mp4";
+  videosRev[1].src = "videos/eli1920_r_10.mp4";
+  videosRev[2].src = "videos/eli1920_r_9.mp4";
+  videosRev[3].src = "videos/eli1920_r_8.mp4";
+  videosRev[4].src = "videos/eli1920_r_7.mp4";
+  videosRev[5].src = "videos/eli1920_r_6.mp4";
+  videosRev[6].src = "videos/eli1920_r_5.mp4";
+  videosRev[7].src = "videos/eli1920_r_4.mp4";
+  videosRev[8].src = "videos/eli1920_r_3.mp4";
+  videosRev[9].src = "videos/eli1920_r_2.mp4";
+}
 
 // //HAMBURGER
 const icons = document.querySelectorAll(".icon");
@@ -883,9 +910,6 @@ function videoReverse() {
 //   scrollVideoRev(0, 11);
 // };
 
-//VIDEO
-let videos = document.getElementsByClassName("videos");
-let videosRev = document.getElementsByClassName("videosRev");
 let intervalPlay = setInterval(() => {
   console.log("not done");
   if (videos[0].currentTime > 0.01) {
