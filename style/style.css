@@ -975,6 +975,8 @@ input:focus::placeholder {
     padding-top: 20px;
     padding-top: 5.33vw;
   }
+}
+@media (max-width: 500px) {
   /* /// */
   #section-eleven {
     padding-top: 60px;
@@ -1250,6 +1252,8 @@ input:focus::placeholder {
     padding-top: 40px;
     padding-top: 5.21vw;
   }
+}
+@media (min-width: 501px) and (max-width: 1025px) {
   /* /// */
   #section-eleven {
     padding-top: 80px;
