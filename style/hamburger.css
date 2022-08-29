@@ -66,7 +66,7 @@
   top: 11px;
   top: 0.57vw;
 }
-@media (max-width: 500px) and (orientation: portrait) {
+@media (max-width: 500px) and (max-aspect-ratio: 13/9) {
   #ham-container {
     width: 25px;
     height: 40px;
@@ -122,7 +122,7 @@
     /* top: 0.57vw; */
   }
 }
-@media (min-width: 501px) and (orientation: portrait) {
+@media (min-width: 501px) and (max-aspect-ratio: 13/9) {
   #ham-container {
     width: 25px;
     height: 60px;

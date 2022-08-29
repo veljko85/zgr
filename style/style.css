@@ -742,7 +742,7 @@ input:focus::placeholder {
   height: 2.08vw;
 }
 /* ///////////////////////////////////////////////////// MOBILE */
-@media (max-width: 500px) and (orientation: portrait) {
+@media (max-width: 500px) and (max-aspect-ratio: 13/9) {
   .nav-bar {
     height: 40px;
     width: 100vw;
@@ -975,8 +975,6 @@ input:focus::placeholder {
     padding-top: 20px;
     padding-top: 5.33vw;
   }
-}
-@media (max-width: 500px) {
   /* /// */
   #section-eleven {
     padding-top: 60px;
@@ -1020,7 +1018,7 @@ input:focus::placeholder {
   }
 }
 /* ///////////////////////////////////////////////////// TABLET */
-@media (min-width: 501px) and (orientation: portrait) {
+@media (min-width: 501px) and (max-aspect-ratio: 13/9) {
   .nav-bar {
     height: 60px;
     width: 100vw;
@@ -1252,8 +1250,6 @@ input:focus::placeholder {
     padding-top: 40px;
     padding-top: 5.21vw;
   }
-}
-@media (min-width: 501px) and (max-width: 1025px) {
   /* /// */
   #section-eleven {
     padding-top: 80px;

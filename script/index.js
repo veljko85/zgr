@@ -8,8 +8,8 @@ if (window.innerHeight > window.innerWidth) {
   videos[0].src = "videos/eli720_a.mp4";
   videosRev[0].src = "videos/eli720_r.mp4";
 
-  document.getElementsByClassName("section-title")[1].innerHTML =
-    "PLANNING &" + " <br /> " + "DESIGN";
+  // document.getElementsByClassName("section-title")[1].innerHTML =
+  //   "PLANNING &" + " <br /> " + "DESIGN";
   document.getElementsByClassName("text")[4].innerHTML =
     "Using BIM method, we include data collected during the planning and" +
     "<br />" +
@@ -74,248 +74,266 @@ for (const navItem of navItems) {
 }
 //////////////// 1
 navItems[0].addEventListener("click", () => {
-  //start video
-  setDisplayCounter(1, counterLine, 0);
-  videos[0].currentTime = 0;
-  scrollVideo(2, 5, 6, 0);
-  //content display
-  setTimeout(() => {
-    sectionContainer[0].style.display = "block";
-  }, 100);
-  setTimeout(() => {
-    sectionContainer[0].style.opacity = 1;
-  }, 1600);
-  setTimeout(() => {
-    sectionTitle[0].classList.add("fade-in-title");
-  }, 1900);
-  setTimeout(() => {
-    text[0].classList.add("fade-in-text");
-  }, 2200);
-  setTimeout(() => {
-    text[1].classList.add("fade-in-text");
-  }, 2500);
-  setTimeout(() => {
-    text[2].classList.add("fade-in-text");
-  }, 2800);
-  setTimeout(() => {
-    text[3].classList.add("fade-in-text");
-  }, 3100);
-  setTimeout(() => {
-    document
-      .getElementsByClassName("partners-container")[0]
-      .classList.add("partners-fade-in");
-  }, 3400);
-  setTimeout(() => {
-    joinUsContainer[0].classList.add("join-us-container-fade-in");
-  }, 3700);
+  if (!triger) {
+    //start video
+    setDisplayCounter(1, counterLine, 0);
+    videos[0].currentTime = 0;
+    scrollVideo(2, 5, 6, 0);
+    //content display
+    setTimeout(() => {
+      sectionContainer[0].style.display = "block";
+    }, 100);
+    setTimeout(() => {
+      sectionContainer[0].style.opacity = 1;
+    }, 1600);
+    setTimeout(() => {
+      sectionTitle[0].classList.add("fade-in-title");
+    }, 1900);
+    setTimeout(() => {
+      text[0].classList.add("fade-in-text");
+    }, 2200);
+    setTimeout(() => {
+      text[1].classList.add("fade-in-text");
+    }, 2500);
+    setTimeout(() => {
+      text[2].classList.add("fade-in-text");
+    }, 2800);
+    setTimeout(() => {
+      text[3].classList.add("fade-in-text");
+    }, 3100);
+    setTimeout(() => {
+      document
+        .getElementsByClassName("partners-container")[0]
+        .classList.add("partners-fade-in");
+    }, 3400);
+    setTimeout(() => {
+      joinUsContainer[0].classList.add("join-us-container-fade-in");
+    }, 3700);
+  }
 });
 ////////////// 2
 navItems[2].addEventListener("click", () => {
-  //start video
-  setDisplayCounter(2, counterLine, 1);
-  videos[0].currentTime = 5;
-  scrollVideo(3, 12.5, 13.5, 71.7);
-  //content display
-  setTimeout(() => {
-    sectionContainer[1].style.display = "block";
-  }, 4100);
-  setTimeout(() => {
-    sectionContainer[1].style.opacity = 1;
-  }, 5100);
-  setTimeout(() => {
-    sectionTitle[1].classList.add("fade-in-title");
-  }, 5400);
-  setTimeout(() => {
-    text[4].classList.add("fade-in-text");
-  }, 5700);
-  setTimeout(() => {
-    joinUsContainer[1].classList.add("join-us-container-fade-in");
-  }, 6000);
+  if (!triger) {
+    //start video
+    setDisplayCounter(2, counterLine, 1);
+    videos[0].currentTime = 5;
+    scrollVideo(3, 12.5, 13.5, 71.7);
+    //content display
+    setTimeout(() => {
+      sectionContainer[1].style.display = "block";
+    }, 4100);
+    setTimeout(() => {
+      sectionContainer[1].style.opacity = 1;
+    }, 5100);
+    setTimeout(() => {
+      sectionTitle[1].classList.add("fade-in-title");
+    }, 5400);
+    setTimeout(() => {
+      text[4].classList.add("fade-in-text");
+    }, 5700);
+    setTimeout(() => {
+      joinUsContainer[1].classList.add("join-us-container-fade-in");
+    }, 6000);
+  }
 });
 ////////////// 3
 navItems[4].addEventListener("click", () => {
-  //start video
-  setDisplayCounter(3, counterLine, 2);
-  videos[0].currentTime = 12.5;
-  scrollVideo(4, 18.5, 19.5, 65.6);
-  //content display
-  setTimeout(() => {
-    sectionContainer[2].style.display = "block";
-  }, 3100);
-  setTimeout(() => {
-    sectionContainer[2].style.opacity = 1;
-  }, 4100);
-  setTimeout(() => {
-    sectionTitle[2].classList.add("fade-in-title");
-  }, 4400);
-  setTimeout(() => {
-    text[5].classList.add("fade-in-text");
-  }, 4700);
-  setTimeout(() => {
-    joinUsContainer[2].classList.add("join-us-container-fade-in");
-  }, 5000);
+  if (!triger) {
+    //start video
+    setDisplayCounter(3, counterLine, 2);
+    videos[0].currentTime = 12.5;
+    scrollVideo(4, 18.5, 19.5, 65.6);
+    //content display
+    setTimeout(() => {
+      sectionContainer[2].style.display = "block";
+    }, 3100);
+    setTimeout(() => {
+      sectionContainer[2].style.opacity = 1;
+    }, 4100);
+    setTimeout(() => {
+      sectionTitle[2].classList.add("fade-in-title");
+    }, 4400);
+    setTimeout(() => {
+      text[5].classList.add("fade-in-text");
+    }, 4700);
+    setTimeout(() => {
+      joinUsContainer[2].classList.add("join-us-container-fade-in");
+    }, 5000);
+  }
 });
 ////////////// 4
 navItems[6].addEventListener("click", () => {
-  //start video
-  setDisplayCounter(4, counterLine, 3);
-  videos[0].currentTime = 18.5;
-  scrollVideo(5, 28.1, 28.5, 56.4);
-  //content display
-  setTimeout(() => {
-    sectionContainer[3].style.display = "block";
-  }, 5600);
-  setTimeout(() => {
-    sectionContainer[3].style.opacity = 1;
-  }, 6600);
-  setTimeout(() => {
-    sectionTitle[3].classList.add("fade-in-title");
-  }, 6900);
-  setTimeout(() => {
-    text[6].classList.add("fade-in-text");
-  }, 7200);
-  setTimeout(() => {
-    text[7].classList.add("fade-in-text");
-  }, 7500);
-  setTimeout(() => {
-    joinUsContainer[3].classList.add("join-us-container-fade-in");
-  }, 7800);
+  if (!triger) {
+    //start video
+    setDisplayCounter(4, counterLine, 3);
+    videos[0].currentTime = 18.5;
+    scrollVideo(5, 28.1, 28.5, 56.4);
+    //content display
+    setTimeout(() => {
+      sectionContainer[3].style.display = "block";
+    }, 5600);
+    setTimeout(() => {
+      sectionContainer[3].style.opacity = 1;
+    }, 6600);
+    setTimeout(() => {
+      sectionTitle[3].classList.add("fade-in-title");
+    }, 6900);
+    setTimeout(() => {
+      text[6].classList.add("fade-in-text");
+    }, 7200);
+    setTimeout(() => {
+      text[7].classList.add("fade-in-text");
+    }, 7500);
+    setTimeout(() => {
+      joinUsContainer[3].classList.add("join-us-container-fade-in");
+    }, 7800);
+  }
 });
 ////////////// 5
 navItems[8].addEventListener("click", () => {
-  //start video
-  setDisplayCounter(5, counterLine, 4);
-  videos[0].currentTime = 28.1;
-  scrollVideo(6, 36.2, 36.5, 48.5);
-  //content display
-  setTimeout(() => {
-    sectionContainer[4].style.display = "block";
-  }, 5100);
-  setTimeout(() => {
-    sectionContainer[4].style.opacity = 1;
-  }, 6100);
-  setTimeout(() => {
-    sectionTitle[4].classList.add("fade-in-title");
-  }, 6400);
-  setTimeout(() => {
-    text[8].classList.add("fade-in-text");
-  }, 6700);
-  setTimeout(() => {
-    text[9].classList.add("fade-in-text");
-  }, 7000);
-  setTimeout(() => {
-    joinUsContainer[4].classList.add("join-us-container-fade-in");
-  }, 7300);
+  if (!triger) {
+    //start video
+    setDisplayCounter(5, counterLine, 4);
+    videos[0].currentTime = 28.1;
+    scrollVideo(6, 36.2, 36.5, 48.5);
+    //content display
+    setTimeout(() => {
+      sectionContainer[4].style.display = "block";
+    }, 5100);
+    setTimeout(() => {
+      sectionContainer[4].style.opacity = 1;
+    }, 6100);
+    setTimeout(() => {
+      sectionTitle[4].classList.add("fade-in-title");
+    }, 6400);
+    setTimeout(() => {
+      text[8].classList.add("fade-in-text");
+    }, 6700);
+    setTimeout(() => {
+      text[9].classList.add("fade-in-text");
+    }, 7000);
+    setTimeout(() => {
+      joinUsContainer[4].classList.add("join-us-container-fade-in");
+    }, 7300);
+  }
 });
 ////////////// 6
 navItems[1].addEventListener("click", () => {
-  //start video
-  setDisplayCounter(6, counterLine, 5);
-  videos[0].currentTime = 36.2;
-  scrollVideo(7, 41.5, 42.5, 42.5);
-  //content display
-  setTimeout(() => {
-    sectionContainer[5].style.display = "block";
-  }, 2100);
-  setTimeout(() => {
-    sectionContainer[5].style.opacity = 1;
-  }, 3100);
-  setTimeout(() => {
-    sectionTitle[5].classList.add("fade-in-title");
-  }, 3400);
-  setTimeout(() => {
-    text[10].classList.add("fade-in-text");
-  }, 3700);
-  setTimeout(() => {
-    text[11].classList.add("fade-in-text");
-  }, 4000);
-  setTimeout(() => {
-    joinUsContainer[5].classList.add("join-us-container-fade-in");
-  }, 4300);
+  if (!triger) {
+    //start video
+    setDisplayCounter(6, counterLine, 5);
+    videos[0].currentTime = 36.2;
+    scrollVideo(7, 41.5, 42.5, 42.5);
+    //content display
+    setTimeout(() => {
+      sectionContainer[5].style.display = "block";
+    }, 2100);
+    setTimeout(() => {
+      sectionContainer[5].style.opacity = 1;
+    }, 3100);
+    setTimeout(() => {
+      sectionTitle[5].classList.add("fade-in-title");
+    }, 3400);
+    setTimeout(() => {
+      text[10].classList.add("fade-in-text");
+    }, 3700);
+    setTimeout(() => {
+      text[11].classList.add("fade-in-text");
+    }, 4000);
+    setTimeout(() => {
+      joinUsContainer[5].classList.add("join-us-container-fade-in");
+    }, 4300);
+  }
 });
 ////////////// 7
 navItems[3].addEventListener("click", () => {
-  //start video
-  setDisplayCounter(7, counterLine, 6);
-  videos[0].currentTime = 41.5;
-  scrollVideo(8, 53.5, 54.5, 30.3);
-  //content display
-  setTimeout(() => {
-    sectionContainer[6].style.display = "block";
-  }, 8100);
-  setTimeout(() => {
-    sectionContainer[6].style.opacity = 1;
-  }, 9100);
-  setTimeout(() => {
-    sectionTitle[6].classList.add("fade-in-title");
-  }, 9400);
-  setTimeout(() => {
-    text[12].classList.add("fade-in-text");
-  }, 9700);
-  setTimeout(() => {
-    text[13].classList.add("fade-in-text");
-  }, 10000);
-  setTimeout(() => {
-    joinUsContainer[6].classList.add("join-us-container-fade-in");
-  }, 10300);
+  if (!triger) {
+    //start video
+    setDisplayCounter(7, counterLine, 6);
+    videos[0].currentTime = 41.5;
+    scrollVideo(8, 53.5, 54.5, 30.3);
+    //content display
+    setTimeout(() => {
+      sectionContainer[6].style.display = "block";
+    }, 8100);
+    setTimeout(() => {
+      sectionContainer[6].style.opacity = 1;
+    }, 9100);
+    setTimeout(() => {
+      sectionTitle[6].classList.add("fade-in-title");
+    }, 9400);
+    setTimeout(() => {
+      text[12].classList.add("fade-in-text");
+    }, 9700);
+    setTimeout(() => {
+      text[13].classList.add("fade-in-text");
+    }, 10000);
+    setTimeout(() => {
+      joinUsContainer[6].classList.add("join-us-container-fade-in");
+    }, 10300);
+  }
 });
 ////////////// 8
 navItems[5].addEventListener("click", () => {
-  //start video
-  setDisplayCounter(8, counterLine, 7);
-  videos[0].currentTime = 53.5;
-  scrollVideo(9, 61.5, 62.5, 23.2);
-  //content display
-  setTimeout(() => {
-    sectionContainer[7].style.display = "block";
-  }, 4100);
-  setTimeout(() => {
-    sectionContainer[7].style.opacity = 1;
-  }, 5100);
-  setTimeout(() => {
-    sectionTitle[7].classList.add("fade-in-title");
-  }, 5400);
-  setTimeout(() => {
-    text[14].classList.add("fade-in-text");
-  }, 5700);
-  setTimeout(() => {
-    text[15].classList.add("fade-in-text");
-  }, 6000);
-  setTimeout(() => {
-    text[16].classList.add("fade-in-text");
-  }, 6300);
-  setTimeout(() => {
-    joinUsContainer[7].classList.add("join-us-container-fade-in");
-  }, 6600);
+  if (!triger) {
+    //start video
+    setDisplayCounter(8, counterLine, 7);
+    videos[0].currentTime = 53.5;
+    scrollVideo(9, 61.5, 62.5, 23.2);
+    //content display
+    setTimeout(() => {
+      sectionContainer[7].style.display = "block";
+    }, 4100);
+    setTimeout(() => {
+      sectionContainer[7].style.opacity = 1;
+    }, 5100);
+    setTimeout(() => {
+      sectionTitle[7].classList.add("fade-in-title");
+    }, 5400);
+    setTimeout(() => {
+      text[14].classList.add("fade-in-text");
+    }, 5700);
+    setTimeout(() => {
+      text[15].classList.add("fade-in-text");
+    }, 6000);
+    setTimeout(() => {
+      text[16].classList.add("fade-in-text");
+    }, 6300);
+    setTimeout(() => {
+      joinUsContainer[7].classList.add("join-us-container-fade-in");
+    }, 6600);
+  }
 });
 ////////////// 9
 navItems[7].addEventListener("click", () => {
-  //start video
-  setDisplayCounter(9, counterLine, 8);
-  videos[0].currentTime = 61.5;
-  scrollVideo(10, 69.9, 71, 14.1);
-  //content display
-  setTimeout(() => {
-    sectionContainer[8].style.display = "block";
-  }, 5100);
-  setTimeout(() => {
-    sectionContainer[8].style.opacity = 1;
-  }, 6100);
-  setTimeout(() => {
-    sectionTitle[8].classList.add("fade-in-title");
-  }, 6400);
-  setTimeout(() => {
-    text[17].classList.add("fade-in-text");
-  }, 6700);
-  setTimeout(() => {
-    text[18].classList.add("fade-in-text");
-  }, 7000);
-  setTimeout(() => {
-    text[19].classList.add("fade-in-text");
-  }, 7300);
-  setTimeout(() => {
-    joinUsContainer[8].classList.add("join-us-container-fade-in");
-  }, 7600);
+  if (!triger) {
+    //start video
+    setDisplayCounter(9, counterLine, 8);
+    videos[0].currentTime = 61.5;
+    scrollVideo(10, 69.9, 71, 14.1);
+    //content display
+    setTimeout(() => {
+      sectionContainer[8].style.display = "block";
+    }, 5100);
+    setTimeout(() => {
+      sectionContainer[8].style.opacity = 1;
+    }, 6100);
+    setTimeout(() => {
+      sectionTitle[8].classList.add("fade-in-title");
+    }, 6400);
+    setTimeout(() => {
+      text[17].classList.add("fade-in-text");
+    }, 6700);
+    setTimeout(() => {
+      text[18].classList.add("fade-in-text");
+    }, 7000);
+    setTimeout(() => {
+      text[19].classList.add("fade-in-text");
+    }, 7300);
+    setTimeout(() => {
+      joinUsContainer[8].classList.add("join-us-container-fade-in");
+    }, 7600);
+  }
 });
 
 //POP UP
@@ -323,16 +341,18 @@ let popUp = document.getElementById("contact-pop-up-container");
 let showPopUps = document.getElementsByClassName("show-pop-up");
 let closePopUpBtn = document.getElementById("close-pop-up");
 let popUpCont = document.getElementById("pop-up");
-
+let popUpOpen = false;
 for (const showPopUp of showPopUps) {
   showPopUp.addEventListener("click", () => {
     popUp.style.display = "block";
+    popUpOpen = true;
   });
 }
 
 closePopUpBtn.onclick = () => {
   popUp.style.display = "none";
   popUpCont.classList.remove("pop-up-fade-in");
+  popUpOpen = false;
 };
 //SECTION COUNTER DISPLAY
 let counterLine = document.getElementsByClassName("counter-line");
@@ -1159,17 +1179,21 @@ let intervalPlay2 = setInterval(() => {
 //SCROLL EVENT
 let scrollSection = 1;
 var lastScrollTop = 0;
+
 document.addEventListener("scroll", () => {
-  var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
-  if (st > lastScrollTop) {
-    console.log("down");
-    videoForvard();
-  } else {
-    console.log("up");
-    videoReverse();
+  if (!hamOpened && !popUpOpen) {
+    var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+    if (st > lastScrollTop) {
+      console.log("down");
+      videoForvard();
+    } else {
+      console.log("up");
+      videoReverse();
+    }
+    lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
   }
-  lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
 });
+
 document.getElementById("arrowUpSect").onclick = () => {
   console.log("upBtn");
   videoReverse();
@@ -1178,8 +1202,9 @@ document.getElementById("arrowDownSect").onclick = () => {
   console.log("downBtn");
   videoForvard();
 };
-// setInterval(() => {
-//   // console.log(videos[0].currentTime);
-//   // console.log(scrollSection);
-//   console.log(triger);
-// }, 100);
+
+setInterval(() => {
+  // console.log(videos[0].currentTime);
+  // console.log(scrollSection);
+  // console.log(hamOpened);
+}, 100);

@@ -1,6 +1,6 @@
 #contact-pop-up-container {
   width: 100vw;
-  height: 100vh;
+  height: 150vh;
   background-color: rgba(255, 255, 255, 0.7);
   z-index: 20;
   position: fixed;
@@ -94,7 +94,7 @@
   height: 2.08vw;
 }
 /* ///////////////////////////////////////////////////// MOBILE */
-@media (max-width: 500px) {
+@media (max-width: 500px) and (max-aspect-ratio: 13/9) {
   #pop-up {
     /* width: 700px; */
     width: 80vw;
@@ -151,60 +151,60 @@
     height: 6vw;
   }
 }
-@media (min-width: 501px) and (max-width: 1025px) {
+@media (min-width: 501px) and (max-aspect-ratio: 13/9) {
   #pop-up {
     /* width: 700px; */
-    width: 80vw;
+    width: 60vw;
     /* height: 600px; */
     height: 60vh;
     /* margin: calc(50vh - 300px) auto; */
     margin: calc(50vh - 35vh) auto;
     /* padding: 10px; */
-    padding: 5vw;
+    padding: 4vw;
     /* background-color: rgb(113, 255, 94); */
   }
   #close-pop-up {
     /* width: 30px; */
-    width: 6vw;
+    width: 4vw;
     /* height: 30px; */
-    height: 6vw;
+    height: 4vw;
   }
   #form-title-pop-up {
     /* font-size: 35px; */
-    font-size: 7vw;
+    font-size: 5vw;
     /* line-height: 27px; */
-    line-height: 7vw;
+    line-height: 5vw;
     /* padding-top: 50px; */
-    padding-top: 13vw;
+    padding-top: 10vw;
     /* padding-bottom: 30px; */
-    padding-bottom: 7vw;
+    padding-bottom: 5vw;
   }
   #form-sub-title-pop-up {
     /* font-size: 18px; */
-    font-size: 4vw;
+    font-size: 3vw;
     /* line-height: 27px; */
-    line-height: 5vw;
+    line-height: 3vw;
   }
   #form-container-pop-up {
     /* width: 600px; */
-    width: 70vw;
+    width: 50vw;
     /* margin: 50px auto; */
-    margin: 10vw auto;
+    margin: 3vw auto;
   }
   .form-inputs-pop-up {
     /* width: 400px; */
-    width: 70vw;
+    width: 50vw;
     /* height: 50px; */
     height: 10vw;
     /* margin: 15px 40px; */
     margin: 0;
     /* font-size: 13px; */
-    font-size: 3vw;
+    font-size: 2.5vw;
   }
   #submit-btn-pop-up {
     /* width: 40px; */
-    width: 6vw;
+    width: 5vw;
     /* height: 40px; */
-    height: 6vw;
+    height: 5vw;
   }
 }
