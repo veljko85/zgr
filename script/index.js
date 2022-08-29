@@ -4,20 +4,54 @@ window.onbeforeunload = function () {
 //VIDEO
 let videos = document.getElementsByClassName("videos");
 let videosRev = document.getElementsByClassName("videosRev");
-if (window.innerHeight > window.innerWidth) {
+if (window.innerHeight / window.innerWidth > 1.4) {
   videos[0].src = "videos/eli720_a.mp4";
   videosRev[0].src = "videos/eli720_r.mp4";
-
+  document.getElementsByClassName("text")[1].innerHTML =
+    "The mission: Build safer, faster and better with technology solutions," +
+    "<br />" +
+    "enable new era of living, working and being experiences, and" +
+    "<br />" +
+    "transform the future of real estate.";
   // document.getElementsByClassName("section-title")[1].innerHTML =
   //   "PLANNING &" + " <br /> " + "DESIGN";
   document.getElementsByClassName("text")[4].innerHTML =
-    "Using BIM method, we include data collected during the planning and" +
+    "Using BIM method, we include data collected during the planning" +
     "<br />" +
-    "design phases. The digital twin extends data capturing throughout the" +
+    "and design phases. The digital twin extends data capturing" +
     "<br />" +
-    "assets construction and operational phases, as well as future planning" +
+    "throughout the assets construction and operational phases," +
     "<br />" +
-    "and design.";
+    "as well as future planning and design.";
+
+  // TURN OFF CAUNTER DISPLAY ON FOCUS ON MOBILE AND TABLET BECAUSE OF ANDROID KEYBORD
+  for (
+    let i = 0;
+    i < document.getElementsByClassName("form-inputs").length;
+    i++
+  ) {
+    document
+      .getElementsByClassName("form-inputs")
+      [i].addEventListener("focus", () => {
+        document.getElementsByClassName(
+          "section-counter-container"
+        )[0].style.display = "none";
+      });
+  }
+
+  for (
+    let i = 0;
+    i < document.getElementsByClassName("form-inputs").length;
+    i++
+  ) {
+    document
+      .getElementsByClassName("form-inputs")
+      [i].addEventListener("blur", () => {
+        document.getElementsByClassName(
+          "section-counter-container"
+        )[0].style.display = "flex";
+      });
+  }
 } else {
   videos[0].src = "videos/eli1920_a.mp4";
   videosRev[0].src = "videos/eli1920_r.mp4";
@@ -41,35 +75,37 @@ let navItems = document.getElementsByClassName("nav-item");
 //JUMP TO VIDEO FROM NAV
 for (const navItem of navItems) {
   navItem.addEventListener("click", () => {
-    // close nav bar
-    icons.forEach((icon) => {
-      icon.classList.toggle("open");
-      !hamOpened ? (hamOpened = true) : (hamOpened = false);
-    });
-    setTimeout(() => {
-      navContainer[0].classList.toggle("fade-in-nav");
-    }, 200);
-    //remove content for all
-    for (const sectionTitles of sectionTitle) {
-      sectionTitles.classList.remove("fade-in-title");
+    if (!triger) {
+      // close nav bar
+      icons.forEach((icon) => {
+        icon.classList.toggle("open");
+        !hamOpened ? (hamOpened = true) : (hamOpened = false);
+      });
+      setTimeout(() => {
+        navContainer[0].classList.toggle("fade-in-nav");
+      }, 200);
+      //remove content for all
+      for (const sectionTitles of sectionTitle) {
+        sectionTitles.classList.remove("fade-in-title");
+      }
+      for (const texts of text) {
+        texts.classList.remove("fade-in-text");
+      }
+      for (const joinUsContainers of joinUsContainer) {
+        joinUsContainers.classList.remove("join-us-container-fade-in");
+      }
+      for (const sectionContainers of sectionContainer) {
+        sectionContainers.style.opacity = 0;
+        sectionContainers.style.display = "none";
+      }
+      document
+        .getElementsByClassName("partners-container")[0]
+        .classList.remove("partners-fade-in");
+      titleTen[0].classList.remove("fade-in-title-ten");
+      textTen[0].classList.remove("fade-in-text-ten");
+      textTenTwo[0].classList.remove("fade-in-text-ten-two");
+      joinUsContainer[9].style.opacity = 0;
     }
-    for (const texts of text) {
-      texts.classList.remove("fade-in-text");
-    }
-    for (const joinUsContainers of joinUsContainer) {
-      joinUsContainers.classList.remove("join-us-container-fade-in");
-    }
-    for (const sectionContainers of sectionContainer) {
-      sectionContainers.style.opacity = 0;
-      sectionContainers.style.display = "none";
-    }
-    document
-      .getElementsByClassName("partners-container")[0]
-      .classList.remove("partners-fade-in");
-    titleTen[0].classList.remove("fade-in-title-ten");
-    textTen[0].classList.remove("fade-in-text-ten");
-    textTenTwo[0].classList.remove("fade-in-text-ten-two");
-    joinUsContainer[9].style.opacity = 0;
   });
 }
 //////////////// 1
