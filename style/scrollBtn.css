@@ -134,8 +134,8 @@
     opacity: 1;
   }
 }
+/* ///////////////////////////////////////////////////// MOBILE */
 @media (max-width: 500px) and (orientation: portrait) {
-  /* @media (orientation: portrait) { */
   #mouse-scroll {
     left: 50%;
     bottom: 30px;
@@ -183,8 +183,8 @@
     margin: 1.33vw auto;
   }
 }
+/* ///////////////////////////////////////////////////// TABLET */
 @media (min-width: 501px) and (orientation: portrait) {
-  /* @media (orientation: portrait) { */
   #mouse-scroll {
     left: 50%;
     bottom: 30px;

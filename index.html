@@ -20,6 +20,7 @@
     <link rel="stylesheet" type="text/css" href="style/scrollBtn.css" />
     <link rel="stylesheet" type="text/css" href="style/hamburger.css" />
     <link rel="stylesheet" type="text/css" href="style/navBar.css" />
+    <link rel="stylesheet" type="text/css" href="style/popUp.css" />
 </head>
 
 <body>
@@ -42,10 +43,12 @@
         <div class="nav-bar">
 
             <div class="logo-container">
-                <div class="logo"></div>
+                <a href="index.html">
+                    <div class="logo" href="index.html"></div>
+                </a>
             </div>
 
-            <div class="ham-container">
+            <div id="ham-container">
                 <div class="icon nav-icon-5">
                     <span></span>
                     <span></span>
@@ -54,35 +57,55 @@
             </div>
 
             <div class="join-our-container">
-                <div class="join-our">
-                    <a href="https://www.google.com">
-                        <p>join our mission</p>
-                    </a>
+                <div class="join-our show-pop-up">
+                    <p>join our mission</p>
                 </div>
             </div>
 
         </div>
 
-        <div id="navigation-container">
+        <div class="navigation-container">
             <div id="nav-items-container">
                 <div class="nav-item">HOME</div>
                 <div class="nav-item">MARKETING</div>
-                <div class="nav-item">PLANING & DESIGN</div>
+                <div class="nav-item">PLANNING & DESIGN</div>
                 <div class="nav-item">LANDSCAPING & GREEN</div>
                 <div class="nav-item">CONSTRUCTION</div>
-                <div class="nav-item" id="nav-item-5">RENEWABLE ENERGU & SUITABILITY</div>
+                <div class="nav-item" id="nav-item-5">RENEWABLE ENERGU &<br>SUITABILITY</div>
                 <div class="nav-item">IOT & SENSORS</div>
                 <div class="nav-item">MOBILITY & DELIVERY</div>
-                <div class="nav-item" id="nav-item-8">MANAGEMENT & MAINTENANCE</div>
+                <div class="nav-item" id="nav-item-8">MANAGEMENT &<br>MAINTENANCE</div>
                 <div class="nav-item">WELL BEING</div>
             </div>
             <div id="we-invite-container">
                 <h1>We invite startups to work with us</h1>
-                <div class="join-us-container-nav">
-                    <a href="https://www.google.com">
-                        <h2 class="join-us-nav">Join us</h2>
-                        <div class="join-us-arrow-nav"></div>
-                    </a>
+                <div class="join-us-container-nav show-pop-up">
+                    <h2 class="join-us-nav">Join us</h2>
+                    <div class="join-us-arrow-nav"></div>
+                </div>
+            </div>
+        </div>
+        <!-- CONTACT POP UP -->
+        <div id="contact-pop-up-container">
+            <div id="pop-up">
+                <div id="close-pop-up"></div>
+                <h1 id="form-title-pop-up">We invite startups to work with us</h1>
+                <h1 id="form-sub-title-pop-up">Contact us, integrate, and join our mission, starting tomorrow.</h1>
+
+                <div id="form-container-pop-up">
+                    <form action="#" method="get">
+                        <input autocomplete="off" type="text" id="name-pop-up" class="form-inputs-pop-up" name="name"
+                            placeholder="Name">
+                        <input autocomplete="off" type="email" id="email-pop-up" class="form-inputs-pop-up" name="email"
+                            placeholder="Email">
+                        <input autocomplete="off" type="tel" id="phone-pop-up" class="form-inputs-pop-up" name="phone"
+                            placeholder="Phone">
+                        <br>
+                        <br>
+                        <br>
+                        <!-- <input type="submit" id="submit-btn" value="Submit"> -->
+                        <input type="image" id="submit-btn-pop-up" src="img/arrowSmallRed.png" alt="submit">
+                    </form>
                 </div>
             </div>
         </div>
@@ -145,11 +168,9 @@
                         </div>
                     </div>
 
-                    <div class="join-us-container join-us-container-one">
-                        <a href="https://www.google.com">
-                            <h2 class="join-us">Join us now</h2>
-                            <div class="join-us-arrow"></div>
-                        </a>
+                    <div class="join-us-container join-us-container-one show-pop-up">
+                        <h2 class="join-us">Join us now</h2>
+                        <div class="join-us-arrow"></div>
                     </div>
 
                 </div>
@@ -172,11 +193,9 @@
 
                     </div>
 
-                    <div class="join-us-container">
-                        <a href="https://www.google.com">
-                            <h2 class="join-us">Join us now</h2>
-                            <div class="join-us-arrow"></div>
-                        </a>
+                    <div class="join-us-container show-pop-up">
+                        <h2 class="join-us">Join us now</h2>
+                        <div class="join-us-arrow"></div>
                     </div>
 
                 </div>
@@ -196,11 +215,9 @@
 
                     </div>
 
-                    <div class="join-us-container">
-                        <a href="https://www.google.com">
-                            <h2 class="join-us">Join us now</h2>
-                            <div class="join-us-arrow"></div>
-                        </a>
+                    <div class="join-us-container show-pop-up">
+                        <h2 class="join-us">Join us now</h2>
+                        <div class="join-us-arrow"></div>
                     </div>
 
                 </div>
@@ -235,11 +252,9 @@
 
                     </div>
 
-                    <div class="join-us-container">
-                        <a href="https://www.google.com">
-                            <h2 class="join-us">Join us now</h2>
-                            <div class="join-us-arrow"></div>
-                        </a>
+                    <div class="join-us-container show-pop-up">
+                        <h2 class="join-us">Join us now</h2>
+                        <div class="join-us-arrow"></div>
                     </div>
 
                 </div>
@@ -267,11 +282,9 @@
 
                     </div>
 
-                    <div class="join-us-container">
-                        <a href="https://www.google.com">
-                            <h2 class="join-us">Join us now</h2>
-                            <div class="join-us-arrow"></div>
-                        </a>
+                    <div class="join-us-container show-pop-up">
+                        <h2 class="join-us">Join us now</h2>
+                        <div class="join-us-arrow"></div>
                     </div>
 
                 </div>
@@ -300,11 +313,9 @@
 
                     </div>
 
-                    <div class="join-us-container">
-                        <a href="https://www.google.com">
-                            <h2 class="join-us">Join us now</h2>
-                            <div class="join-us-arrow"></div>
-                        </a>
+                    <div class="join-us-container show-pop-up">
+                        <h2 class="join-us">Join us now</h2>
+                        <div class="join-us-arrow"></div>
                     </div>
 
                 </div>
@@ -331,11 +342,9 @@
 
                     </div>
 
-                    <div class="join-us-container">
-                        <a href="https://www.google.com">
-                            <h2 class="join-us">Join us now</h2>
-                            <div class="join-us-arrow"></div>
-                        </a>
+                    <div class="join-us-container show-pop-up">
+                        <h2 class="join-us">Join us now</h2>
+                        <div class="join-us-arrow"></div>
                     </div>
 
                 </div>
@@ -363,11 +372,9 @@
 
                     </div>
 
-                    <div class="join-us-container">
-                        <a href="https://www.google.com">
-                            <h2 class="join-us">Join us now</h2>
-                            <div class="join-us-arrow"></div>
-                        </a>
+                    <div class="join-us-container show-pop-up">
+                        <h2 class="join-us">Join us now</h2>
+                        <div class="join-us-arrow"></div>
                     </div>
 
                 </div>
@@ -397,11 +404,9 @@
 
                     </div>
 
-                    <div class="join-us-container">
-                        <a href="https://www.google.com">
-                            <h2 class="join-us">Join us now</h2>
-                            <div class="join-us-arrow"></div>
-                        </a>
+                    <div class="join-us-container show-pop-up">
+                        <h2 class="join-us">Join us now</h2>
+                        <div class="join-us-arrow"></div>
                     </div>
 
                 </div>
@@ -431,11 +436,9 @@
 
                     </div>
 
-                    <div class="join-us-container join-us-container-ten">
-                        <a href="https://www.google.com">
-                            <h2 class="join-us">Join us now</h2>
-                            <div class="join-us-arrow"></div>
-                        </a>
+                    <div class="join-us-container join-us-container-ten show-pop-up">
+                        <h2 class="join-us">Join us now</h2>
+                        <div class="join-us-arrow"></div>
                     </div>
 
                 </div>
@@ -471,98 +474,14 @@
         </div>
 
         <div id="video-background">
-            <!-- <video id="video" autoplay muted playsinline></video> -->
             <video id="video01" class="videos" autoplay muted playsinline>
                 <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
                 </source>
             </video>
-            <video id="video02" class="videos" muted playsinline>
-                <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
-                </source>
-            </video>
-            <video id="video03" class="videos" muted playsinline>
-                <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
-                </source>
-            </video>
-            <video id="video04" class="videos" muted playsinline>
-                <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
-                </source>
-            </video>
-            <video id="video05" class="videos" muted playsinline>
-                <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
-                </source>
-            </video>
-            <video id="video06" class="videos" muted playsinline>
-                <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
-                </source>
-            </video>
-            <video id="video07" class="videos" muted playsinline>
-                <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
-                </source>
-            </video>
-            <video id="video08" class="videos" muted playsinline>
-                <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
-                </source>
-            </video>
-            <video id="video09" class="videos" muted playsinline>
-                <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
-                </source>
-            </video>
-            <video id="video10" class="videos" muted playsinline>
-                <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
-                </source>
-            </video>
-            <video id="video11" class="videos" muted playsinline>
-                <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
-                </source>
-            </video>
-
-
-            <!-- REVERSE VIDEOS -->
             <video id="videoRev11" class="videosRev" muted playsinline>
                 <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
                 </source>
             </video>
-            <video id="videoRev10" class="videosRev" muted playsinline>
-                <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
-                </source>
-            </video>
-            <video id="videoRev09" class="videosRev" muted playsinline>
-                <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
-                </source>
-            </video>
-            <video id="videoRev08" class="videosRev" muted playsinline>
-                <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
-                </source>
-            </video>
-            <video id="videoRev07" class="videosRev" muted playsinline>
-                <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
-                </source>
-            </video>
-            <video id="videoRev06" class="videosRev" muted playsinline>
-                <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
-                </source>
-            </video>
-            <video id="videoRev05" class="videosRev" muted playsinline>
-                <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
-                </source>
-            </video>
-            <video id="videoRev04" class="videosRev" muted playsinline>
-                <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
-                </source>
-            </video>
-            <video id="videoRev03" class="videosRev" muted playsinline>
-                <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
-                </source>
-            </video>
-            <video id="videoRev02" class="videosRev" muted playsinline>
-                <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
-                </source>
-            </video>
-            <!-- <video id="videoRev01" class="videosRev" muted playsinline>
-                <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' src="videos/eli1920_r_1.mp4">
-                </source>
-            </video> -->
 
         </div>
 

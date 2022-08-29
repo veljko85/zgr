@@ -1,0 +1,153 @@
+#contact-pop-up-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 20;
+  position: fixed;
+  display: none;
+}
+.show-pop-up {
+  cursor: pointer;
+}
+#pop-up {
+  width: 700px;
+  width: 36.46vw;
+  height: 600px;
+  height: 31.25vw;
+  background-color: rgb(255, 255, 255);
+  margin: calc(50vh - 300px) auto;
+  margin: calc(50vh - 15.62vw) auto;
+  padding: 10px;
+  padding: 0.52vw;
+  padding: 10px;
+  box-shadow: 0px 0px 10px #888888;
+}
+#close-pop-up {
+  width: 30px;
+  width: 1.56vw;
+  height: 30px;
+  height: 1.56vw;
+  float: right;
+  background: url("../img/close.png");
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+#form-title-pop-up {
+  font-size: 35px;
+  font-size: 1.82vw;
+  line-height: 27px;
+  line-height: 1.4vw;
+  letter-spacing: 0px;
+  color: var(--eli-red);
+  font-weight: 100;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  opacity: 1;
+  padding-top: 50px;
+  padding-top: 2.6;
+  padding-bottom: 30px;
+  padding-bottom: 1.56vw;
+}
+#form-sub-title-pop-up {
+  font-size: 18px;
+  font-size: 0.94vw;
+  line-height: 27px;
+  line-height: 1.4vw;
+  letter-spacing: 0px;
+  color: #000000;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  opacity: 1;
+  /* transition: 1s; */
+}
+#form-container-pop-up {
+  /* width: 100vw; */
+  width: 600px;
+  width: 31.25vw;
+  margin: 50px auto;
+  margin: 2.6vw auto;
+  text-align: center;
+}
+.form-inputs-pop-up {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #000000;
+  width: 400px;
+  width: 20.83vw;
+  height: 50px;
+  height: 2.6vw;
+  margin: 15px 40px;
+  margin: 0.78vw 2.08vw;
+  font-size: 13px;
+  font-size: 0.68vw;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+  background: transparent;
+}
+#submit-btn-pop-up {
+  width: 40px;
+  width: 2.08vw;
+  height: 40px;
+  height: 2.08vw;
+}
+/* ///////////////////////////////////////////////////// MOBILE */
+@media (max-width: 500px) and (orientation: portrait) {
+  #pop-up {
+    /* width: 700px; */
+    width: 80vw;
+    /* height: 600px; */
+    height: 60vh;
+    /* margin: calc(50vh - 300px) auto; */
+    margin: calc(50vh - 35vh) auto;
+    /* padding: 10px; */
+    padding: 5vw;
+    /* background-color: rgb(113, 255, 94); */
+  }
+  #close-pop-up {
+    /* width: 30px; */
+    width: 6vw;
+    /* height: 30px; */
+    height: 6vw;
+  }
+  #form-title-pop-up {
+    /* font-size: 35px; */
+    font-size: 7vw;
+    /* line-height: 27px; */
+    line-height: 7vw;
+    /* padding-top: 50px; */
+    padding-top: 13vw;
+    /* padding-bottom: 30px; */
+    padding-bottom: 7vw;
+  }
+  #form-sub-title-pop-up {
+    /* font-size: 18px; */
+    font-size: 4vw;
+    /* line-height: 27px; */
+    line-height: 5vw;
+  }
+  #form-container-pop-up {
+    /* width: 600px; */
+    width: 70vw;
+    /* margin: 50px auto; */
+    margin: 10vw auto;
+  }
+  .form-inputs-pop-up {
+    /* width: 400px; */
+    width: 70vw;
+    /* height: 50px; */
+    height: 10vw;
+    /* margin: 15px 40px; */
+    margin: 0;
+    /* font-size: 13px; */
+    font-size: 3vw;
+  }
+  #submit-btn-pop-up {
+    /* width: 40px; */
+    width: 6vw;
+    /* height: 40px; */
+    height: 6vw;
+  }
+}
