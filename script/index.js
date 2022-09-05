@@ -105,6 +105,8 @@ for (const navItem of navItems) {
       textTen[0].classList.remove("fade-in-text-ten");
       textTenTwo[0].classList.remove("fade-in-text-ten-two");
       joinUsContainer[9].style.opacity = 0;
+      wellBeingPageContainer.style.display = "none";
+      wellBeingPageOpen = false;
     }
   });
 }
@@ -371,23 +373,49 @@ navItems[7].addEventListener("click", () => {
     }, 7600);
   }
 });
+//WELL BEING PAGE
+let wellBeingPageContainer = document.getElementById(
+  "well-being-page-container"
+);
+let closeWellBeingPage = document.getElementById("close-well-being-page");
+let wellBeingPageOpen = true;
+document
+  .getElementsByClassName("nav-item-well-being-page")[0]
+  .addEventListener("click", () => {
+    // close nav bar
+    icons.forEach((icon) => {
+      icon.classList.toggle("open");
+      !hamOpened ? (hamOpened = true) : (hamOpened = false);
+    });
+    setTimeout(() => {
+      navContainer[0].classList.toggle("fade-in-nav");
+    }, 200);
+    wellBeingPageContainer.style.display = "block";
+    wellBeingPageOpen = true;
+  });
+closeWellBeingPage.onclick = () => {
+  wellBeingPageContainer.style.display = "none";
+  wellBeingPageOpen = false;
+};
 
 //POP UP
 let popUp = document.getElementById("contact-pop-up-container");
+let popUpBlurBg = document.getElementsByClassName("blur-bg");
 let showPopUps = document.getElementsByClassName("show-pop-up");
 let closePopUpBtn = document.getElementById("close-pop-up");
 let popUpCont = document.getElementById("pop-up");
 let popUpOpen = false;
 for (const showPopUp of showPopUps) {
   showPopUp.addEventListener("click", () => {
+    popUpBlurBg[0].style.display = "block";
     popUp.style.display = "block";
     popUpOpen = true;
   });
 }
 
 closePopUpBtn.onclick = () => {
+  popUpBlurBg[0].style.display = "none";
   popUp.style.display = "none";
-  popUpCont.classList.remove("pop-up-fade-in");
   popUpOpen = false;
 };
 //SECTION COUNTER DISPLAY
@@ -1217,7 +1245,7 @@ let scrollSection = 1;
 var lastScrollTop = 0;
 
 document.addEventListener("scroll", () => {
-  if (!hamOpened && !popUpOpen) {
+  if (!hamOpened && !popUpOpen && !wellBeingPageOpen) {
     var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
     if (st > lastScrollTop) {
       console.log("down");

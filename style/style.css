@@ -730,9 +730,6 @@ body {
 input:focus::placeholder {
   color: transparent;
 }
-input:hover #form-container {
-  background-color: red;
-}
 .form-inputs {
   border: none;
   outline: none;

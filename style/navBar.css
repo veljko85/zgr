@@ -32,7 +32,8 @@
   flex-wrap: wrap;
   align-content: center;
 }
-.nav-item {
+.nav-item,
+.nav-item-well-being-page {
   /* background-color: aquamarine; */
   height: 10vh;
   width: 25vw;
@@ -47,7 +48,8 @@
   /* text-align: center; */
   cursor: pointer;
 }
-.nav-item:hover {
+.nav-item:hover,
+.nav-item-well-being-page:hover {
   color: var(--eli-red);
 }
 #nav-item-5,
@@ -129,7 +131,8 @@
     padding-top: calc(40px + 5.33vw);
     display: block;
   }
-  .nav-item {
+  .nav-item,
+  .nav-item-well-being-page {
     height: 7.5vh;
     width: 100vw;
     font-size: 20px;
@@ -137,7 +140,8 @@
     line-height: 50px;
     line-height: 13.33vw;
   }
-  .nav-item:hover {
+  .nav-item:hover,
+  .nav-item-well-being-page:hover {
     color: #000000;
   }
   #nav-item-5,
@@ -206,7 +210,8 @@
     padding-top: calc(60px + 2.6vw);
     display: block;
   }
-  .nav-item {
+  .nav-item,
+  .nav-item-well-being-page {
     height: 7.5vh;
     width: 100vw;
     font-size: 25px;
@@ -214,7 +219,8 @@
     line-height: 50px;
     line-height: 6.51vw;
   }
-  .nav-item:hover {
+  .nav-item:hover,
+  .nav-item-well-being-page:hover {
     color: #000000;
   }
   #nav-item-5,
