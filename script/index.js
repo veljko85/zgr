@@ -378,7 +378,7 @@ let wellBeingPageContainer = document.getElementById(
   "well-being-page-container"
 );
 let closeWellBeingPage = document.getElementById("close-well-being-page");
-let wellBeingPageOpen = true;
+let wellBeingPageOpen = false;
 document
   .getElementsByClassName("nav-item-well-being-page")[0]
   .addEventListener("click", () => {
@@ -1179,14 +1179,12 @@ function videoReverse() {
 
 let loaded = false;
 let intervalPlay = setInterval(() => {
-  console.log("not done");
   if (videos[0].currentTime > 0.01) {
     clearInterval(intervalPlay);
     videos[0].pause();
     videos[0].currentTime = 0;
     setTimeout(() => {
       document.getElementById("loading-scr").style.opacity = 0;
-      console.log("loaded");
     }, 1000);
     setTimeout(() => {
       document.getElementById("loading-scr").style.display = "none";
@@ -1248,10 +1246,8 @@ document.addEventListener("scroll", () => {
   if (!hamOpened && !popUpOpen && !wellBeingPageOpen) {
     var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
     if (st > lastScrollTop) {
-      console.log("down");
       videoForvard();
     } else {
-      console.log("up");
       videoReverse();
     }
     lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
@@ -1259,16 +1255,8 @@ document.addEventListener("scroll", () => {
 });
 
 document.getElementById("arrowUpSect").onclick = () => {
-  console.log("upBtn");
   videoReverse();
 };
 document.getElementById("arrowDownSect").onclick = () => {
-  console.log("downBtn");
   videoForvard();
 };
-
-setInterval(() => {
-  // console.log(videos[0].currentTime);
-  // console.log(scrollSection);
-  // console.log(hamOpened);
-}, 100);
