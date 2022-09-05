@@ -7,9 +7,17 @@
   position: fixed;
   display: none;
   z-index: 19;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(0px);
+  animation: popBcgBlur 0.5s forwards;
 }
-
+@keyframes popBcgBlur {
+  from {
+    backdrop-filter: blur(0px);
+  }
+  to {
+    backdrop-filter: blur(10px);
+  }
+}
 #contact-pop-up-container {
   width: 100vw;
   height: 100vh;
@@ -38,7 +46,7 @@
   padding: 0.52vw;
   box-shadow: 0px 0px 10px #888888;
   opacity: 0;
-  animation: popFade 0.7s forwards;
+  animation: popFade 1.5s forwards;
 }
 @keyframes popFade {
   from {
