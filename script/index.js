@@ -462,10 +462,12 @@ function setDisplayCounter(scrollSectionDisplay, counterLine, counterLineNum) {
 
 function scrollVideo(nextScrollSec, from, to, sectCurTime) {
   videosRev[0].style.opacity = 0;
-  videosRev[0].currentTime = sectCurTime;
   videos[0].play();
   triger = true;
   scrollSection = nextScrollSec;
+  setTimeout(() => {
+    videosRev[0].currentTime = sectCurTime;
+  }, 500);
   let intervalPlaySrollA = setInterval(() => {
     if (videos[0].currentTime > from && videos[0].currentTime < to) {
       clearInterval(intervalPlaySrollA);
@@ -478,10 +480,12 @@ function scrollVideo(nextScrollSec, from, to, sectCurTime) {
 }
 function scrollVideoRev(nextScrollSec, from, to, sectCurTime) {
   videosRev[0].style.opacity = 1;
-  videos[0].currentTime = sectCurTime;
   videosRev[0].play();
   triger = true;
   scrollSection = nextScrollSec;
+  setTimeout(() => {
+    videos[0].currentTime = sectCurTime;
+  }, 500);
   let intervalPlaySrollR = setInterval(() => {
     if (videosRev[0].currentTime > from && videosRev[0].currentTime < to) {
       clearInterval(intervalPlaySrollR);
