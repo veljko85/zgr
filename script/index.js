@@ -1187,7 +1187,7 @@ let intervalPlay = setInterval(() => {
   if (videos[0].currentTime > 0.01) {
     clearInterval(intervalPlay);
     videos[0].pause();
-    videos[0].currentTime = 0;
+    
 
     setTimeout(() => {
       document.getElementById("loading-scr").style.opacity = 0;
@@ -1197,6 +1197,7 @@ let intervalPlay = setInterval(() => {
       loaded = true;
     }, 2500);
     if (locationHref == "") {
+      videos[0].currentTime = 0;
       setTimeout(() => {
         //content display
         setTimeout(() => {
