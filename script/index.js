@@ -1188,9 +1188,11 @@ let locationHref = location.href.split("/").pop();
 let locationHrefFirstSign = Array.from(locationHref);
 
 // console.log(locationHref, locationHrefFirstSign[0]);
-
+videos[0].play();
 let intervalPlay = setInterval(() => {
+  console.log("loading");
   if (videos[0].currentTime > 0.01) {
+    console.log("done loading");
     clearInterval(intervalPlay);
     videos[0].pause();
 
