@@ -1197,6 +1197,7 @@ let intervalPlay = setInterval(() => {
     videos[0].pause();
 
     setTimeout(() => {
+      document.getElementById("loading-scr").style.transition = "2s";
       document.getElementById("loading-scr").style.opacity = 0;
     }, 1000);
     setTimeout(() => {
