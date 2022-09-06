@@ -31,7 +31,7 @@ body {
   background-color: #ffffff;
   z-index: 100;
   position: absolute;
-  transition: 2s;
+  top: 0;
 }
 .videos {
   position: fixed;
