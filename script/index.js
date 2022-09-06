@@ -1184,8 +1184,10 @@ function videoReverse() {
 
 let loaded = false;
 
-console.log(location.href.split("/").pop());
 let locationHref = location.href.split("/").pop();
+let locationHrefFirstSign = Array.from(locationHref);
+
+// console.log(locationHref, locationHrefFirstSign[0]);
 
 let intervalPlay = setInterval(() => {
   if (videos[0].currentTime > 0.01) {
@@ -1199,7 +1201,7 @@ let intervalPlay = setInterval(() => {
       document.getElementById("loading-scr").style.display = "none";
       loaded = true;
     }, 2500);
-    if (locationHref == "") {
+    if (locationHref != "#") {
       videos[0].currentTime = 0;
       setTimeout(() => {
         //content display
@@ -1234,7 +1236,7 @@ let intervalPlay = setInterval(() => {
         }, 3700);
       }, 2500);
     }
-    if (locationHref == "") {
+    if (locationHref != "#") {
       let intervalPlay2 = setInterval(() => {
         if (loaded) {
           videos[0].play();
