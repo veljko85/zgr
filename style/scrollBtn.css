@@ -1,0 +1,234 @@
+#mouse-scroll {
+  style: block;
+}
+#mouse-scroll {
+  position: fixed;
+  margin: auto;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  z-index: 10;
+  bottom: 30px;
+  bottom: 1.56vw;
+  transition: 1s;
+}
+#scroll-text {
+  font-size: 15px;
+  font-size: 0.78vw;
+  letter-spacing: 0px;
+  line-height: 27px;
+  line-height: 1.4vw;
+  color: var(--eli-red);
+  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
+  /* padding-top: 60px; */
+  /* transition: 1s; */
+  /* opacity: 0; */
+}
+#mouse-scroll span {
+  display: block;
+  width: 5px;
+  width: 0.26vw;
+  height: 5px;
+  height: 0.26vw;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-right: 2px solid var(--eli-red);
+  border-bottom: 2px solid var(--eli-red);
+  margin: 0 0 3px 5px;
+  margin: 0 0 0.16vw 0.26vw;
+  margin-left: calc(50% - 1px);
+  margin-left: calc(50% - 0.05vw);
+}
+#mouse-scroll .mouse {
+  height: 21px;
+  height: 1.09vw;
+  width: 14px;
+  width: 0.73vw;
+  border-radius: 10px;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  border: 2px solid var(--eli-red);
+  top: 170px;
+  top: 8.85vw;
+  margin-left: calc(50% - 7px);
+  margin-left: calc(50% - 0.36vw);
+}
+
+#mouse-scroll .down-arrow-1 {
+  margin-top: 6px;
+  margin-top: 0.31vw;
+}
+#mouse-scroll .down-arrow-1,
+#mouse-scroll .down-arrow-2,
+#mouse-scroll .down-arrow-3 {
+  -webkit-animation: mouse-scroll 1s infinite;
+  -moz-animation: mouse-scroll 1s infinite;
+}
+#mouse-croll .down-arrow-1 {
+  -webkit-animation-delay: 0.1s;
+  -moz-animation-delay: 0.1s;
+  -webkit-animation-direction: alternate;
+}
+#mouse-scroll .down-arrow-2 {
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  -webkit-animation-direction: alternate;
+}
+#mouse-scroll .down-arrow-3 {
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-dekay: 0.3s;
+  -webkit-animation-direction: alternate;
+}
+#mouse-scroll .mouse-in {
+  height: 5px;
+  height: 0.26vw;
+  width: 2px;
+  width: 0.1vw;
+  display: block;
+  margin: 5px auto;
+  margin: 0.26vw auto;
+  background: var(--eli-red);
+  position: relative;
+}
+#mouse-scroll .mouse-in {
+  -webkit-animation: animated-mouse 1.2s ease infinite;
+  moz-animation: mouse-animated 1.2s ease infinite;
+}
+
+@-webkit-keyframes animated-mouse {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(6px);
+    -ms-transform: translateY(6px);
+    transform: translateY(6px);
+  }
+}
+@-webkit-keyframes mouse-scroll {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes mouse-scroll {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* ///////////////////////////////////////////////////// MOBILE */
+@media (max-width: 500px) and (orientation: portrait) {
+  #mouse-scroll {
+    left: 50%;
+    bottom: 30px;
+    bottom: 8vw;
+  }
+  #scroll-text {
+    font-size: 15px;
+    font-size: 4vw;
+    line-height: 27px;
+    line-height: 7.2vw;
+  }
+  #mouse-scroll span {
+    display: block;
+    width: 5px;
+    width: 1.33vw;
+    height: 5px;
+    height: 1.33vw;
+    margin: 0 0 3px 5px;
+    margin: 0 0 0.8vw 1.33vw;
+    margin-left: calc(50% - 1px);
+  }
+  #mouse-scroll .mouse {
+    height: 21px;
+    height: 5.6vw;
+    width: 14px;
+    width: 3.73vw;
+    border-radius: 10px;
+    border-radius: 2.67vw;
+    top: 170px;
+    top: 145.33vw;
+    margin-left: calc(50% - 7px);
+    margin-left: calc(50% - 1.87vw);
+  }
+
+  #mouse-scroll .down-arrow-1 {
+    margin-top: 6px;
+    margin-top: 1.6vw;
+  }
+  #mouse-scroll .mouse-in {
+    height: 5px;
+    height: 1.33vw;
+    width: 2px;
+    width: 0.53vw;
+    margin: 5px auto;
+    margin: 1.33vw auto;
+  }
+}
+/* ///////////////////////////////////////////////////// TABLET */
+@media (min-width: 501px) and (orientation: portrait) {
+  #mouse-scroll {
+    left: 50%;
+    bottom: 30px;
+    bottom: 3.91vw;
+  }
+  #scroll-text {
+    font-size: 15px;
+    font-size: 1.95vw;
+    line-height: 27px;
+    line-height: 3.51vw;
+  }
+  #mouse-scroll span {
+    display: block;
+    width: 5px;
+    width: 0.65vw;
+    height: 5px;
+    height: 0.65vw;
+    margin: 0 0 3px 5px;
+    margin: 0 0 0.39vw 0.65vw;
+    margin-left: calc(50% - 1px);
+  }
+  #mouse-scroll .mouse {
+    height: 21px;
+    height: 2.73vw;
+    width: 14px;
+    width: 1.82vw;
+    border-radius: 10px;
+    border-radius: 1.3vw;
+    top: 170px;
+    top: 22.13vw;
+    margin-left: calc(50% - 7px);
+    margin-left: calc(50% - 0.91vw);
+  }
+
+  #mouse-scroll .down-arrow-1 {
+    margin-top: 6px;
+    margin-top: 0.78vw;
+  }
+  #mouse-scroll .mouse-in {
+    height: 5px;
+    height: 0.65vw;
+    width: 2px;
+    width: 0.26vw;
+    margin: 5px auto;
+    margin: 0.65vw auto;
+  }
+}
