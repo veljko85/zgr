@@ -128,7 +128,7 @@
   padding: 50px 0 20px 0;
   font-size: 15px;
   font-size: 0.78vw;
-  font-weight: 100;
+  font-weight: 300;
   font-family: "Montserrat", sans-serif;
 }
 #well-being-page-fake-form-container {
@@ -272,7 +272,7 @@
     padding: 5.33vw 0 2.66vw 0;
     font-size: 15px;
     font-size: 4vw;
-    font-weight: 100;
+    font-weight: 300;
     font-family: "Montserrat", sans-serif;
   }
   #well-being-page-form-container h3:last-of-type {
@@ -411,7 +411,7 @@
     padding: 50px 0 20px 0;
     font-size: 30px;
     font-size: 2.92vw;
-    font-weight: 100;
+    font-weight: 300;
     font-family: "Montserrat", sans-serif;
   }
   #well-being-page-fake-form-container {

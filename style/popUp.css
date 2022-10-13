@@ -85,7 +85,7 @@
   line-height: 1.4vw;
   letter-spacing: 0px;
   color: var(--eli-red);
-  font-weight: 100;
+  font-weight: 400;
   font-family: "Montserrat", sans-serif;
   text-align: center;
   opacity: 1;
@@ -120,7 +120,7 @@
   padding: 0 0 1.04vw 0;
   font-size: 15px;
   font-size: 0.78vw;
-  font-weight: 100;
+  font-weight: 300;
   font-family: "Montserrat", sans-serif;
 }
 #form-container-pop-up h3:last-of-type {

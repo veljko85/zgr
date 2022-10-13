@@ -11,18 +11,6 @@
   src: url(../fonts/elgoc-semibold-webfont.woff) format("woff"),
     url(../fonts/elgoc-semibold-webfont.ttf) format("opentype");
 }
-/* Webfont: Elgoc-Thin */
-@font-face {
-  font-family: "ElgocThin";
-  src: url("Elgoc-Thin.eot"); /* IE9 Compat Modes */
-  src: url("Elgoc-Thin.eot?#iefix") format("embedded-opentype"),
-    /* IE6-IE8 */ url("Elgoc-Thin.woff") format("woff"),
-    /* Modern Browsers */ url("Elgoc-Thin.woff2") format("woff2"),
-    /* Modern Browsers */ url("Elgoc-Thin.ttf") format("truetype"); /* Safari, Android, iOS */
-  font-style: normal;
-  font-weight: normal;
-  text-rendering: optimizeLegibility;
-}
 * {
   -webkit-tap-highlight-color: transparent;
 }
